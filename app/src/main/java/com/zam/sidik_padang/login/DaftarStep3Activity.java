@@ -832,8 +832,13 @@ public class DaftarStep3Activity extends BaseActivity
 
         String email = editTextEmail.getText().toString().trim();
         url += "&email=" + encode(email);
-        url += "&provinsi=42385";
-        url += "&kabupaten=50532";
+        url += "&provinsi=12920";
+
+        if (selectedKabupaten == 0) {
+            Util.showDialog(this, getString(R.string.please_select_kabupaten));
+            return;
+        }
+        url += "&kabupaten=" + listKabupaten.get(selectedKabupaten).get("id");
 
         if (selectedKecamatan == 0) {
             Util.showDialog(this, getString(R.string.please_select_kecamatan));

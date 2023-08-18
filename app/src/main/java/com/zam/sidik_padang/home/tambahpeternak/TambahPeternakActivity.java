@@ -375,7 +375,7 @@ public class TambahPeternakActivity extends BaseLogedinActivity
                 Thread.sleep(500);
                 runOnUiThread(new Runnable() {
                     public void run() {
-                        loadKecamatanFromServer("50532");
+                        loadKabupatenFromServer("12920");
                         //loadProvinsiList();
                     }
                 });
@@ -1062,8 +1062,13 @@ public class TambahPeternakActivity extends BaseLogedinActivity
 //		}
 
         url += "&email=" + encode(email);
-        url += "&provinsi=42385";
-        url += "&kabupaten=50532";
+        url += "&provinsi=12920";
+
+        if (selectedKabupaten == 0) {
+            Util.showDialog(this, getString(R.string.please_select_kabupaten));
+            return;
+        }
+        url += "&kabupaten=" + listKabupaten.get(selectedKabupaten).get("id");
 
         if (selectedKecamatan == 0) {
             Util.showDialog(this, getString(R.string.please_select_kecamatan));
@@ -1206,8 +1211,9 @@ public class TambahPeternakActivity extends BaseLogedinActivity
                     if (je == null) return;
                     JsonArray array = je.getAsJsonArray();
                     Map<String, String> map;
-                    for (int i = listKabupaten.size() - 1; i > 0; i--) listKabupaten.remove(i);
-
+                    if (listKabupaten.size() > 1) {
+                        listKabupaten.subList(1, listKabupaten.size()).clear();
+                    }
                     for (JsonElement element : array) {
                         if (element == null) continue;
                         JsonObject jo = element.getAsJsonObject();
@@ -1251,7 +1257,9 @@ public class TambahPeternakActivity extends BaseLogedinActivity
                     if (je == null) return;
                     JsonArray array = je.getAsJsonArray();
                     Map<String, String> map;
-                    for (int i = listKecamatan.size() - 1; i > 0; i--) listKecamatan.remove(i);
+                    if (listKecamatan.size() > 1) {
+                        listKecamatan.subList(1, listKecamatan.size()).clear();
+                    }
 
                     for (JsonElement element : array) {
                         if (element == null) continue;

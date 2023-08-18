@@ -1,0 +1,254 @@
+[
+  {
+    "bulan_min": 0,
+    "bulan_max": 0,
+    "hari_min": 0,
+    "hari_max": 205,
+    "parameter": [
+      {
+        "nama": "Tinggi Pundak",
+        "kode": "TP",
+        "ukuran": [
+          {
+            "kelas": "3",
+            "min": 93,
+            "maks": 0,
+            "skor": ""
+          }
+        ]
+      },
+      {
+        "nama": "Panjang Badan",
+        "kode": "PB",
+        "ukuran": [
+          {
+            "kelas": "3",
+            "min": 87,
+            "maks": 0,
+            "skor": ""
+          }
+        ]
+      },
+      {
+        "nama": "Lingkar dada",
+        "kode": "LD",
+        "ukuran": [
+          {
+            "kelas": "3",
+            "min": 100,
+            "maks": 0,
+            "skor": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "bulan_min": 12,
+    "bulan_max": 18,
+    "hari_min": 0,
+    "hari_max": 0,
+    "parameter": [
+      {
+        "nama": "Tinggi Pundak",
+        "kode": "TP",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 122,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 117,
+            "maks": 121,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 107,
+            "maks": 116,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Panjang Badan",
+        "kode": "PB",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 120,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 114,
+            "maks": 119,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 102,
+            "maks": 113,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Lingkar dada",
+        "kode": "LD",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 144,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 138,
+            "maks": 143,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 126,
+            "maks": 137,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Lingkar Skrotum",
+        "kode": "LS",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 19,
+            "maks": 0,
+            "skor": "1"
+          },
+          {
+            "kelas": "2",
+            "min": 19,
+            "maks": 0,
+            "skor": "1"
+          },
+          {
+            "kelas": "3",
+            "min": 19,
+            "maks": 0,
+            "skor": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "bulan_min": 18,
+    "bulan_max": 24,
+    "hari_min": 0,
+    "hari_max": 0,
+    "parameter": [
+      {
+        "nama": "Tinggi Pundak",
+        "kode": "TP",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 131,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 126,
+            "maks": 120,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 116,
+            "maks": 125,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Panjang Badan",
+        "kode": "PB",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 141,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 134,
+            "maks": 140,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 120,
+            "maks": 133,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Lingkar dada",
+        "kode": "LD",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 169,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 161,
+            "maks": 168,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 145,
+            "maks": 160,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Lingkar Skrotum",
+        "kode": "LS",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 22,
+            "maks": 0,
+            "skor": "1"
+          },
+          {
+            "kelas": "2",
+            "min": 22,
+            "maks": 0,
+            "skor": "1"
+          },
+          {
+            "kelas": "3",
+            "min": 22,
+            "maks": 0,
+            "skor": "1"
+          }
+        ]
+      }
+    ]
+  }
+]

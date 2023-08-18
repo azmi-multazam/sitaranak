@@ -1,0 +1,14 @@
+{
+  "Kelamin": [
+    {
+      "id": "1",
+      "kelamin": "Laki-laki"
+    },
+    {
+      "id": "2",
+      "kelamin": "Perempuan"
+    }
+  ],
+  "success": true,
+  "message": "berhasil"
+}

@@ -1,0 +1,286 @@
+[
+  {
+    "bulan_min": 0,
+    "bulan_max": 0,
+    "hari_min": 0,
+    "hari_max": 205,
+    "parameter": [
+      {
+        "nama": "Tinggi Pundak",
+        "kode": "TP",
+        "ukuran": [
+          {
+            "kelas": "3",
+            "min": 93,
+            "maks": 0,
+            "skor": ""
+          }
+        ]
+      },
+      {
+        "nama": "Panjang Badan",
+        "kode": "PB",
+        "ukuran": [
+          {
+            "kelas": "3",
+            "min": 87,
+            "maks": 0,
+            "skor": ""
+          }
+        ]
+      },
+      {
+        "nama": "Lingkar dada",
+        "kode": "LD",
+        "ukuran": [
+          {
+            "kelas": "3",
+            "min": 100,
+            "maks": 0,
+            "skor": ""
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "bulan_min": 12,
+    "bulan_max": 18,
+    "hari_min": 0,
+    "hari_max": 0,
+    "parameter": [
+      {
+        "nama": "Tinggi Pundak",
+        "kode": "TP",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 116,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 111,
+            "maks": 115,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 106,
+            "maks": 110,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Panjang Badan",
+        "kode": "PB",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 115,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 108,
+            "maks": 114,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 101,
+            "maks": 107,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Lingkar dada",
+        "kode": "LD",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 141,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 133,
+            "maks": 140,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 125,
+            "maks": 132,
+            "skor": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "bulan_min": 18,
+    "bulan_max": 24,
+    "hari_min": 0,
+    "hari_max": 0,
+    "parameter": [
+      {
+        "nama": "Tinggi Pundak",
+        "kode": "TP",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 120,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 117,
+            "maks": 119,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 114,
+            "maks": 116,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Panjang Badan",
+        "kode": "PB",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 127,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 123,
+            "maks": 126,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 119,
+            "maks": 122,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Lingkar dada",
+        "kode": "LD",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 154,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 148,
+            "maks": 153,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 142,
+            "maks": 147,
+            "skor": "1"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "bulan_min": 24,
+    "bulan_max": 36,
+    "hari_min": 0,
+    "hari_max": 0,
+    "parameter": [
+      {
+        "nama": "Tinggi Pundak",
+        "kode": "TP",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 131,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 126,
+            "maks": 130,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 121,
+            "maks": 125,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Panjang Badan",
+        "kode": "PB",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 134,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 130,
+            "maks": 133,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 125,
+            "maks": 129,
+            "skor": "1"
+          }
+        ]
+      },
+      {
+        "nama": "Lingkar dada",
+        "kode": "LD",
+        "ukuran": [
+          {
+            "kelas": "1",
+            "min": 167,
+            "maks": 0,
+            "skor": "3"
+          },
+          {
+            "kelas": "2",
+            "min": 161,
+            "maks": 166,
+            "skor": "2"
+          },
+          {
+            "kelas": "3",
+            "min": 155,
+            "maks": 160,
+            "skor": "1"
+          }
+        ]
+      }
+    ]
+  }
+]

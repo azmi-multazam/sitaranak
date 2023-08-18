@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.sklb.dataternak.detail.DetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appbarlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fitsSystemWindows="false"
+            android:subtitleTextAppearance="@style/AppTheme.ToolbarSubTitle"
+            app:popupTheme="@style/AppTheme.PopupOverlay"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            tools:ignore="UnusedAttribute" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="5dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/fragment_detail_ternak_ImageViewFotoTernak"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:src="@mipmap/ic_launcher"
+                        android:background="@color/primaryLight"
+                        android:scaleType="centerCrop" />
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:id="@+id/fragment_detail_ternak_ImageViewBarcode"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:scaleType="fitXY"
+                        app:srcCompat="@drawable/ic_account_circle_white" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPadding="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:textSize="16sp"
+                        android:padding="5dp"
+                        android:fontFamily="@font/nunito_black"
+                        android:text="Detail" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/colorGreySoft" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*">
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:text="ID Ternak"
+                                android:textColor="@color/black_1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/fragment_detail_ternak_TextViewIdTernak"
+                                android:textColor="@color/black_1"
+                                android:text="ID Ternak" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:text="id eartag"
+                                android:textColor="@color/black_1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/fragment_detail_ternak_TextViewNomorIrtek"
+                                android:textColor="@color/black_1" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:text="Rumpun"
+                                android:textColor="@color/black_1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/fragment_detail_ternak_TextViewBangsaSapi"
+                                android:textColor="@color/black_1" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:text="Kelamin"
+                                android:textColor="@color/black_1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/fragment_detail_ternak_TextViewJenisKelamin"
+                                android:textColor="@color/black_1" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:text="Perkawinan"
+                                android:textColor="@color/black_1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_detail_ternak_TextViewMetodePerkawinan" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:text="Tipe Kelahiran"
+                                android:textColor="@color/black_1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_detail_ternak_TextViewTipeKelahiran" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:text="Induk"
+                                android:textColor="@color/black_1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/fragment_detail_ternak_TextViewInduk"
+                                android:clickable="true"
+                                android:textColor="@color/selector_primary_accent" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:text="Bapak"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:id="@+id/fragment_detail_ternak_TextViewBapak"
+                                android:clickable="true"
+                                android:textColor="@color/selector_primary_accent" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:text="Pemilik"
+                                android:textColor="@color/black_1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_detail_ternak_TextViewNamaPemilik" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:text="Alamat"
+                                android:textColor="@color/black_1"
+                                android:textStyle="bold" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_detail_ternak_TextVieAlamat" />
+                        </TableRow>
+
+                    </TableLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/fragment_detail_ternak_Progresbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp">
+
+        <ProgressBar
+            android:id="@+id/fragment_detail_ternak_FABProgressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:visibility="invisible" />
+
+        <com.getbase.floatingactionbutton.FloatingActionsMenu
+            android:id="@+id/fragment_detail_ternak_FAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:visibility="invisible"
+            app:fab_addButtonColorNormal="@color/colorPrimary"
+            app:fab_addButtonColorPressed="@color/colorAccent"
+            app:fab_labelStyle="@style/menu_labels_style" />
+    </FrameLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

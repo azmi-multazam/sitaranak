@@ -1,0 +1,147 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_and_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingTop="16dp"
+        android:transitionName="transisi_settings"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:ignore="UnusedAttribute">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentPadding="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <androidx.appcompat.widget.AppCompatSpinner
+                        android:id="@+id/activity_settings_Spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_border_grey_accent"
+                        android:minHeight="20dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/activity_settings_TextViewKodeLama"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:text="PIN lama" />
+
+                    <EditText
+                        android:id="@+id/activity_settings_EditTextKodeLAma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_border_grey_accent"
+                        android:textColor="@color/black_1"
+                        android:hint="PIN lama"
+                        android:inputType="numberPassword"
+                        android:padding="7dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/activity_settings_TextViewKodeBaru1"
+                        android:layout_width="135dp"
+                        android:textColor="@color/black_1"
+                        android:layout_height="wrap_content"
+                        android:text="PIN baru" />
+
+                    <EditText
+                        android:id="@+id/activity_settings_EditTextKodeBaru1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_border_grey_accent"
+                        android:textColor="@color/black_1"
+                        android:hint="PIN baru"
+                        android:inputType="numberPassword"
+                        android:padding="7dp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:id="@+id/activity_settings_TextViewKodeBaru2"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:text="Ulangi PIN baru" />
+
+                    <EditText
+                        android:id="@+id/activity_settings_EditTextKodeBaru2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_border_grey_accent"
+                        android:hint="ulangi PIN baru"
+                        android:inputType="numberPassword"
+                        android:textColor="@color/black_1"
+                        android:padding="7dp" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView android:id="@+id/activity_settings_ButtonUbah"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="1dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="UBAH"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white" />
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

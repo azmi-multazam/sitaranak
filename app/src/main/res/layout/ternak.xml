@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.zam.sidik_padang.home.dataternak.detailternak.silsilah.SilsilahLinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_silsilah"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:padding="3dp">
+
+    <TextView
+        android:id="@+id/textViewTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:textColor="@color/black_1"
+        android:textSize="12sp" />
+
+    <com.zam.sidik_padang.util.customclasses.ImageViewKotak
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="4dp"
+        android:adjustViewBounds="true"
+        android:maxWidth="75dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/ic_sapi_kepala" />
+
+    <TextView
+        android:id="@+id/textViewIdTernak"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:text="ID: -"
+        android:lines="1"
+        android:paddingTop="4dp"
+        android:textColor="@color/selector_black_accent" />
+
+    <TextView
+        android:id="@+id/textViewEarTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:gravity="center"
+        android:ellipsize="end"
+        android:lines="1"
+        android:text="ear tag: -"
+        android:textSize="12sp"
+        android:textColor="@color/black_1"
+        android:textStyle="bold" />
+</com.zam.sidik_padang.home.dataternak.detailternak.silsilah.SilsilahLinearLayout>

@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorGreySoft" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:padding="10dp"
+        tools:context="com.zam.sidik_padang.profilku.EditProfileActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/center"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content">
+
+                    <com.zam.sidik_padang.util.customclasses.ImageViewBulat
+                        android:id="@+id/content_edit_profil_ImageViewFoto"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:padding="4dp"
+                        android:background="@color/zxing_transparent"
+                        android:scaleType="centerCrop"
+                        app:border_ring="4dp"
+                        app:border_warna="@color/colorPrimary"
+                        app:srcCompat="@drawable/selector_ic_person_100dp" />
+
+                    <ImageView
+                        android:id="@+id/content_edit_profil_addFoto"
+                        android:layout_width="36dp"
+                        android:layout_height="36dp"
+                        android:layout_marginLeft="36dp"
+                        android:layout_marginStart="36dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_alignParentEnd="true"
+                        android:background="@drawable/selector_bulat"
+                        app:srcCompat="@drawable/ic_camera" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/center">
+
+                    <TextView
+                        android:id="@+id/content_edit_profil_TextViewFoto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:text="@string/pass_photo" />
+
+                    <ProgressBar
+                        android:id="@+id/content_edit_profil_ProgressbarFoto"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/content_edit_profil_TextViewFoto"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginStart="5dp"
+                        android:indeterminate="false"
+                        android:visibility="invisible" />
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+            <!--
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPadding="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+                -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:textColor="@color/black_1"
+                    android:textSize="16sp"
+                    android:text="Data Peternak"
+                    android:fontFamily="@font/nunito_black"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGreySoft" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:stretchColumns="1">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nama"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/content_edit_profile_EditTextNama"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:inputType="text|textPersonName"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agama"
+                            android:textStyle="bold"
+                            android:textColor="@color/black_1" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/content_edit_profile_SpinnerAgama"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp" />
+
+                    </TableRow>
+
+                    <TableRow android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Tanggal Lahir"
+                            android:textStyle="bold"
+                            android:textColor="@color/black_1" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/content_edit_profile_EditTexTanggalLahir"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:focusable="false"
+                            android:inputType="number"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1" />
+
+                    </TableRow>
+
+                    <TableRow android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/no_ktp"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/content_edit_profile_EditTextKtp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:inputType="number"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1" />
+
+                    </TableRow>
+
+                    <TableRow android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/region"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/content_edit_profile_EditTextProvinsi"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textColor="@color/black_1"
+                            android:textSize="14sp" />
+
+                    </TableRow>
+
+                    <TableRow android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kabupaten"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/content_edit_profile_EditTextKabupaten"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:text=""
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1" />
+
+                    </TableRow>
+
+
+                    <TableRow android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kecamatan"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/content_edit_profile_EditTextKecamatan"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textColor="@color/black_1"
+                            android:textSize="14sp" />
+
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/desa"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/content_edit_profile_EditTextDesa"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:clickable="true"
+                            android:focusable="false"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textColor="@color/black_1"
+                            android:textSize="14sp" />
+
+                    </TableRow>
+                    <!--
+                    <TableRow android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/level"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/content_edit_profile_EditTextLevel"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1" />
+
+                    </TableRow>
+
+                    <TableRow android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kelompok"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/content_edit_profile_EditTextKelompok"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1" />
+
+                    </TableRow>
+
+                    <TableRow android:gravity="center_vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/kelompok_ternak"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/content_edit_profile_EditTextKelompokTernak"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1" />
+
+                    </TableRow>
+                    -->
+                </TableLayout>
+            </LinearLayout>
+            <!--
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPadding="8dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+            -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="@string/data_usaha"
+                    android:textColor="@color/black_1"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/nunito_black"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/colorGreySoft" />
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:stretchColumns="1">
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/nama_usaha"
+                            android:textStyle="bold"
+                            android:textColor="@color/black_1" />
+
+                        <EditText
+                            android:id="@+id/content_edit_profile_EditTextNamaUsaha"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:inputType="textCapWords"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1" />
+
+                    </TableRow>
+                    <!--<TableRow>-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:text="Status"-->
+                    <!--android:textStyle="bold"/>-->
+
+                    <!--<EditText-->
+                    <!--android:inputType="text"-->
+                    <!--android:id="@+id/content_edit_profile_EditTextStatus"-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginStart="10dp"-->
+                    <!--/>-->
+
+                    <!--</TableRow>-->
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nomor Telepon"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/content_edit_profile_EditTextTelepon"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:inputType="phone"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textColor="@color/black_1"
+                            android:textSize="14sp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="E-Mail"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/content_edit_profile_EditTextEmail"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:inputType="textEmailAddress"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Komoditas"
+                            android:layout_gravity="center_vertical"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/content_edit_profile_SpinnerKomoditas"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jenis Usaha"
+                            android:textColor="@color/black_1"
+                            android:layout_gravity="center_vertical"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/content_edit_profile_SpinnerJenisUsaha"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp" />
+
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Produk Penjualan"
+                            android:textColor="@color/black_1"
+                            android:layout_gravity="center_vertical"
+                            android:textStyle="bold" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/content_edit_profile_SpinnerProdukPenjualan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="4dp" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/content_edit_profil_RowNamaProdukOlahan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Nama Produk"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <EditText
+                            android:id="@+id/content_edit_profile_EditTextNamaProdukOlahan"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_weight="1"
+                            android:inputType="text"
+                            android:scrollHorizontally="true"
+                            android:scrollbars="none"
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1" />
+                    </TableRow>
+
+                </TableLayout>
+            </LinearLayout>
+            <!--
+            </androidx.cardview.widget.CardView>
+            -->
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</LinearLayout>

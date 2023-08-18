@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:clickable="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingTop="12dp"
+    android:focusable="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/root"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:clickable="true"
+        android:layout_gravity="center_horizontal"
+        app:cardBackgroundColor="@color/primaryLight"
+        app:cardCornerRadius="20dp"
+        app:contentPadding="16dp"
+        app:cardElevation="0dp"
+        android:foreground="?attr/selectableItemBackgroundBorderless">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitCenter"
+            app:tint="@color/textPrimary"
+            android:src="@drawable/ic_cow" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:text="Ternak"
+        android:textAlignment="center"
+        android:textColor="@color/textPrimary" />
+</LinearLayout>

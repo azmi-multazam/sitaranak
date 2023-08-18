@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#888888">
+
+    <include layout="@layout/appbar_and_toolbar" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="?attr/actionBarSize"
+        android:background="@android:color/white"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            app:cardUseCompatPadding="true"
+            app:cardElevation="6dp"
+            app:cardCornerRadius="10dp">
+
+            <com.zam.sidik_padang.util.customclasses.PrintPreviewLayout
+                android:id="@+id/printPreviewLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white">
+
+                <TextView
+                    android:id="@+id/textViewTitle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/colorPrimary"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:paddingTop="15dp"
+                    android:text="SIDIK MEMBER ID CARD"
+                    android:textColor="@android:color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textLevel"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/textViewTitle"
+                    android:background="@color/colorGrey"
+                    android:fontFamily="monospace"
+                    android:gravity="center"
+                    android:text="@string/peternak"
+                    android:textColor="@android:color/white" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/textLevel"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/layoutPhoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_below="@id/textViewTitle"
+                        android:layout_weight="0.45"
+                        android:orientation="horizontal">
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+
+                            <ImageView
+                                android:id="@+id/imageViewFoto"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_margin="10dp"
+                                android:adjustViewBounds="true"
+                                android:background="@color/windowBackground"
+                                android:scaleType="centerCrop"
+                                android:src="@drawable/ic_menu_utama_default_profile" />
+
+
+                        </FrameLayout>
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:paddingLeft="10dp"
+                                android:paddingStart="10dp"
+                                android:paddingTop="8dp">
+
+                                <com.zam.sidik_padang.util.customclasses.RobotoCondensedTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nama"
+                                    android:textSize="10sp" />
+
+                                <com.zam.sidik_padang.util.customclasses.RobotoCondensedTextView
+                                    android:id="@+id/textNama"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:textAllCaps="true"
+                                    android:textStyle="bold" />
+
+                                <com.zam.sidik_padang.util.customclasses.RobotoCondensedTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Alamat"
+                                    android:textSize="10sp" />
+
+                                <com.zam.sidik_padang.util.customclasses.RobotoCondensedTextView
+                                    android:id="@+id/textAlamat"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:lines="1"
+                                    android:textStyle="bold" />
+
+                                <com.zam.sidik_padang.util.customclasses.RobotoCondensedTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="Tanggal lahir"
+                                    android:textSize="10sp" />
+
+                                <com.zam.sidik_padang.util.customclasses.RobotoCondensedTextView
+                                    android:id="@+id/textTanggalLahir"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="2"
+                                    android:textStyle="bold" />
+
+                                <com.zam.sidik_padang.util.customclasses.RobotoCondensedTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="4dp"
+                                    android:text="ID"
+                                    android:textSize="10sp" />
+
+                                <com.zam.sidik_padang.util.customclasses.RobotoCondensedTextView
+                                    android:id="@+id/textId"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:maxLines="2"
+                                    android:text="KS1234567"
+                                    android:textStyle="bold" />
+                            </LinearLayout>
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0.45">
+
+                        <LinearLayout
+                            android:id="@+id/layoutTanggalDaftar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/colorItemHeader"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <com.zam.sidik_padang.util.customclasses.RobotoCondensedTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:text="Tanggal daftar"
+                                android:textSize="12sp" />
+
+                            <com.zam.sidik_padang.util.customclasses.RobotoCondensedTextView
+                                android:id="@+id/textTanggalDaftar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:maxLines="2"
+
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@id/layoutTanggalDaftar"
+                            android:orientation="horizontal">
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:adjustViewBounds="true"
+                                        android:maxHeight="65dp"
+                                        android:padding="10dp"
+                                        android:src="@drawable/sidik_bulat_hijau" />
+
+                                    <ImageView
+                                        android:id="@+id/imageKsi"
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:adjustViewBounds="true"
+                                        android:maxHeight="65dp"
+                                        android:padding="10dp"
+                                        android:src="@drawable/ksi" />
+                                </LinearLayout>
+                            </FrameLayout>
+
+                            <View
+                                android:layout_width="2dp"
+                                android:layout_height="match_parent"
+                                android:layout_marginBottom="15dp"
+                                android:layout_marginTop="15dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <FrameLayout
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1">
+
+                                <ImageView
+                                    android:id="@+id/imageBarcode"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:adjustViewBounds="true" />
+                            </FrameLayout>
+                        </LinearLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+
+            </com.zam.sidik_padang.util.customclasses.PrintPreviewLayout>
+        </androidx.cardview.widget.CardView>
+    </FrameLayout>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom|center_horizontal"
+        android:layout_marginBottom="5dp"
+        android:visibility="invisible" />
+
+    <TextView
+        android:id="@+id/button"
+        style="@style/AppTheme.BottomButton"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:text="Print" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

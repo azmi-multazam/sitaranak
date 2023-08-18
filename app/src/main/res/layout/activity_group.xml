@@ -1,0 +1,85 @@
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <include layout="@layout/appbar_and_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <TextView
+            android:id="@+id/textViewNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Tidak ada data"
+            android:visibility="invisible" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/layoutInput"
+            android:clipToPadding="false"
+            android:padding="5dp"
+            tools:listitem="@layout/item_message"
+            app:stackFromEnd="true" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top"
+            android:indeterminate="true"
+            android:visibility="invisible" />
+
+        <FrameLayout
+            android:id="@+id/layoutInput"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="#FFFFFF"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:tint="@color/textPrimary"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="14dp"
+                android:src="@drawable/ic_edit" />
+
+            <ImageView
+                android:id="@+id/button"
+                android:layout_width="46dp"
+                android:layout_height="46dp"
+                android:adjustViewBounds="true"
+                android:layout_gravity="end|bottom"
+                android:background="@drawable/selector_btn_primary"
+                android:contentDescription="Tombol kirim"
+                android:scaleType="centerInside"
+                android:paddingStart="12dp"
+                app:tint="@android:color/white"
+                app:srcCompat="@drawable/ic_send" />
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="56dp"
+                android:background="@drawable/bg_text_round_primary"
+                android:maxLines="4"
+                android:paddingStart="46dp"
+                android:paddingEnd="24dp"
+                android:hint="Input teks"
+                android:textColor="@color/black_1" />
+        </FrameLayout>
+    </RelativeLayout>
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

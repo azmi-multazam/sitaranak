@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:fillViewport="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/windowBackground">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/windowBackground"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/top"
+                android:layout_width="match_parent"
+                android:layout_height="70dp"
+                android:background="@color/colorPrimary" />
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:scaleType="fitXY"
+                android:layout_below="@id/top"
+                android:src="@drawable/wave_top" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/fragment_member_CardUserInfo"
+                android:layout_width="match_parent"
+                android:layout_height="142dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:foreground="?android:selectableItemBackground"
+                app:cardCornerRadius="12dp"
+                app:cardUseCompatPadding="true"
+                app:contentPadding="12dp"
+                app:cardElevation="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.zam.sidik_padang.util.customclasses.ImageViewBulat
+                        android:id="@+id/fragment_member_ImageViewFoto"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:adjustViewBounds="true"
+                        android:background="@color/windowBackground"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/ic_menu_utama_default_profile"
+                        app:border_ring="4dp"
+                        app:border_warna="@color/colorPrimary" />
+
+                    <ImageView
+                        android:id="@+id/fragment_member_ImageViewBarcode"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/ic_baseline_qr_code_24"
+                        android:scaleType="centerInside" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="12dp"
+                        android:paddingEnd="12dp"
+                        android:orientation="vertical"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@id/fragment_member_ImageViewFoto"
+                        android:layout_toStartOf="@id/fragment_member_ImageViewBarcode">
+
+                        <TextView
+                            android:id="@+id/fragment_member_TextViewMemberName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textStyle="bold"
+                            android:textSize="14sp"
+                            android:textColor="@color/black_1"
+                            android:padding="3dp" />
+
+                        <TextView
+                            android:id="@+id/fragment_member_TextViewMemberBarcode"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_1"
+                            android:textSize="12sp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Menu Utama"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:fontFamily="@font/nunito_black"
+            android:textColor="@color/textPrimary"
+            android:layout_marginStart="@dimen/fab_margin" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:padding="@dimen/fab_margin">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fragment_member_menu_ternak"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:clickable="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_gravity="center_horizontal"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/primaryLight"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="14dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:id="@+id/imageViewMenuTernak"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_cow" />
+
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Ternak"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPrimary" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fragment_member_menu_berita"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:clickable="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_gravity="center_horizontal"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/primaryLight"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="14dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_news" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Berita"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPrimary" />
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fragment_member_menu_room_diskusi"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:clickable="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_gravity="center_horizontal"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/primaryLight"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="14dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_room" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="Diskusi"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPrimary" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/fragment_member_menu_ppob"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:clickable="true"
+                    android:layout_marginStart="6dp"
+                    android:layout_marginEnd="6dp"
+                    android:layout_gravity="center_horizontal"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/primaryLight"
+                    app:cardCornerRadius="20dp"
+                    app:contentPadding="14dp"
+                    app:cardElevation="0dp">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="fitCenter"
+                        android:src="@drawable/ic_ppob" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="PPOB"
+                    android:textAlignment="center"
+                    android:textColor="@color/textPrimary" />
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <com.zam.sidik_padang.util.listmenu.HomeMenuView
+            android:id="@+id/homeMenu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/fab_margin"
+            android:nestedScrollingEnabled="false"
+            tools:itemCount="4"
+            tools:listitem="@layout/item_home_menu" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#CCCCCC" />
+
+        <com.zam.sidik_padang.util.customclasses.ExpandableLayout
+            android:id="@+id/expandable_picker"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="42dp"
+                android:background="?android:selectableItemBackground">
+
+                <TextView
+                    android:id="@+id/txt_header_expandable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Menu PPOB"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:fontFamily="@font/nunito_black"
+                    android:textColor="@color/textPrimary"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="@dimen/fab_margin" />
+
+                <ImageView
+                    android:id="@+id/img_header_expandable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="16dp"
+                    app:srcCompat="@drawable/ic_expand_more" />
+
+            </RelativeLayout>
+
+            <com.zam.sidik_padang.util.listmenu.HomeMenuView
+                android:id="@+id/rv_ppob_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/fab_margin"
+                tools:listitem="@layout/item_home_menu"
+                tools:itemCount="9" />
+
+        </com.zam.sidik_padang.util.customclasses.ExpandableLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#CCCCCC" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/recommended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/fab_margin"
+                android:layout_marginTop="20dp"
+                android:text="Berita Terkini"
+                android:textColor="@color/warna1"
+                android:fontFamily="@font/nunito_black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/all_news"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/fab_margin"
+                android:layout_marginTop="20dp"
+                android:layout_alignParentEnd="true"
+                android:background="?android:selectableItemBackground"
+                android:text="Semua"
+                android:textColor="@color/warna1"
+                android:fontFamily="@font/nunito_regular"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerview_recommended"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/recommended"
+                android:layout_marginTop="10dp"
+                android:clipToPadding="false"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                tools:listitem="@layout/item_home_news" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
+

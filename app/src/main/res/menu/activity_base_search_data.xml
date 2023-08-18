@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+
+        android:id="@+id/activity_base_search_data_optionSearch"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:icon="@drawable/ic_search"
+        android:title="Search"
+        app:showAsAction="always">
+        <!--
+    <item
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="never"
+        android:id="@+id/activity_base_search_data_1"
+        android:title="Item1"/>
+    <item
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:icon="@drawable/ic_search"
+        app:showAsAction="never"
+        android:id="@+id/activity_base_search_data_2"
+        android:title="Item2"/>
+    -->
+    </item>
+
+</menu>

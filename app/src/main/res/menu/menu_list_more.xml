@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/empty"
+        android:title="menu"
+        android:orderInCategory="101"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_person_white">
+        <menu>
+            <item
+                android:id="@+id/menu_pemilik_ternak"
+                android:icon="@drawable/ic_person"
+                app:showAsAction="ifRoom"
+                android:title="Pemilik Ternak" />
+        </menu>
+    </item>
+</menu>

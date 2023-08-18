@@ -1,0 +1,106 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/windowBackground"
+    tools:context="com.zam.sidik_padang.sapiku.SapikuFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="180dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/wave_top" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentPadding="16dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="4dp"
+                    app:cardUseCompatPadding="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/fragment_sapiku_TextViewTotalSapi"
+                            android:layout_width="wrap_content"
+                            android:layout_height="50dp"
+                            android:text="--"
+                            android:textSize="40sp"
+                            android:gravity="center_vertical"
+                            android:includeFontPadding="false"
+                            android:textColor="@color/textPrimary"
+                            android:textStyle="bold" />
+
+                        <ImageView
+                            android:layout_width="40dp"
+                            android:layout_height="40dp"
+                            android:layout_alignParentEnd="true"
+                            app:tint="@color/textPrimary"
+                            android:src="@drawable/ic_sapi_kepala" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:layout_marginStart="12dp"
+                            android:layout_toEndOf="@id/fragment_sapiku_TextViewTotalSapi"
+                            android:textColor="@color/black_1"
+                            android:text="Total Sapi (ekor)" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+
+                <include
+                    android:id="@+id/fragment_sapiku_LayoutDewasa"
+                    layout="@layout/sapiku_new" />
+
+                <include
+                    android:id="@+id/fragment_sapiku_LayoutMuda"
+                    layout="@layout/sapiku_new" />
+
+                <include
+                    android:id="@+id/fragment_sapiku_LayoutLepasSapih"
+                    layout="@layout/sapiku_new" />
+
+                <include
+                    android:id="@+id/fragment_sapiku_LayoutPedet"
+                    layout="@layout/sapiku_new" />
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/fragment_sapiku_Progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16dp"
+        android:visibility="invisible" />
+</FrameLayout>

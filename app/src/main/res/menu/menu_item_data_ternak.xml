@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_item_data_ternak_ItemDetail"
+        android:title="@string/detail" />
+    <item
+        android:id="@+id/menu_item_data_ternak_ItemDataRecording"
+        android:title="@string/data_recording" />
+    <item
+        android:id="@+id/menu_item_data_ternak_ItemDataSapi"
+        android:title="@string/data_sapi" />
+
+    <item
+        android:id="@+id/menu_item_data_ternak_ItemHapus"
+        android:title="@string/hapus" />
+
+</menu>

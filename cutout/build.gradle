@@ -1,0 +1,43 @@
+apply plugin: 'com.android.library'
+
+android {
+    namespace "com.github.gabrielbb.cutout"
+
+    compileSdk 33
+    defaultConfig {
+        minSdk 24
+        targetSdk 33
+        versionCode 2
+        versionName '0.1.2'
+
+        testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    lintOptions {
+        abortOnError false
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    //implementation project(':easyimage')
+    //implementation project(':checkerboarddrawable')
+    api project(':cropper')
+    implementation project(':gesture')
+}
+

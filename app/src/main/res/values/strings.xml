@@ -1,0 +1,204 @@
+<resources>
+    <string name="app_name" translatable="false">Sidik Padang</string>
+    <string name="registration">Registration</string>
+    <string name="user_id">User ID</string>
+    <string name="password">Password</string>
+    <string name="login">Login</string>
+    <string name="register">Register</string>
+    <string name="member_area">SIDIK Padang</string>
+    <string name="enter_user_id">Enter user ID</string>
+    <string name="enter_password">Enter password</string>
+    <string name="invalid_user_id">Invalid user ID</string>
+    <string name="wrong_password">Wrong password</string>
+    <string name="no_internet_connection">No internet connection</string>
+    <string name="an_error_ocurred">An error occurred</string>
+    <string name="session_expired">Your session expired</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="logout">Logout</string>
+    <string name="user_id_">User ID %s</string>
+    <string name="member">Member</string>
+    <string name="logout_">Logout?</string>
+    <string name="menu_icon">Menu icon</string>
+    <string name="kelompok_ternak">Kelompok ternak</string>
+    <string name="lihat_coordinator">Lihat koordinator</string>
+    <string name="data_peternak">Data peternak</string>
+    <string name="data_ternak">Data ternak</string>
+    <string name="profile">Profile</string>
+    <string name="edit_profile">Edit profile</string>
+    <string name="lihat_tambah_data_ternak">Lihat/tambah data ternak</string>
+    <string name="tambah_data_recording_ternak">Tambah data recording ternak</string>
+    <string name="room_diskusi">Room diskusi</string>
+    <string name="news_info">News/info</string>
+    <string name="level">Level</string>
+    <string name="region">Provonsi</string>
+    <string name="kelompok">Kelompok</string>
+    <string name="alamat">Alamat</string>
+    <string name="alamat_korwil">Alamat korwil</string>
+    <string name="loading_data">Loading data…</string>
+    <string name="delete_">Delete?</string>
+    <string name="delete">Delete</string>
+    <string name="tambah_kelompok_ternak">Tambah Kelompok Ternak</string>
+    <string name="forgot_password_">Forgot password?</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="name_kelompok">Nama kelompok</string>
+    <string name="add">Add</string>
+    <string name="name_kelompok_ternak">Nama kelompok ternak</string>
+    <string name="alamat_kelompok_ternak">Alamat kelompok ternak</string>
+    <string name="this_field_is_mandatory">This field is mandatory</string>
+    <string name="select_provinsi">Select Provinsi</string>
+    <string name="please_select_provinsi">Please select region</string>
+    <string name="sending_data">Sending data…</string>
+    <string name="no_ktp">No KTP</string>
+    <string name="no_hp">No HP</string>
+    <string name="desa">Desa</string>
+    <string name="kecamatan">Kecamatan</string>
+    <string name="kabupaten">Kabupaten</string>
+    <string name="nama_kelompok">Nama kelompok</string>
+    <string name="alamat_kelompok">Alamat kelompok</string>
+    <string name="koordinator">Koordinator</string>
+    <string name="search_by_region">Search gion</string>
+    <string name="scan_barcode">Scan barcode</string>
+    <string name="search_by_userid">Search By User ID</string>
+    <string name="search_by_region_code">Search by region code %s</string>
+    <string name="select_kabupaten">Select Kabupaten</string>
+    <string name="scan">Scan</string>
+    <string name="search">Search</string>
+    <string name="data_ternak_dibawahnya">Data Ternak Dibawahnya</string>
+    <string name="search_by_userid_">Search by user ID %s</string>
+    <string name="_by_region_">-region-</string>
+    <string name="enter_user_id_or_select_region">Enter user ID or select region</string>
+    <string name="no_data_found">No data found</string>
+    <string name="jenis">Jenis</string>
+    <string name="bangsa">Rumpun</string>
+    <string name="kelmain">Kelamin</string>
+    <string name="data_ternak_">Data ternak %s</string>
+    <string name="name_as_on_id_card">Name as on ID card</string>
+    <string name="id_card">ID card</string>
+    <string name="id">ID</string>
+    <string name="address">Address</string>
+    <string name="email_address">Email address</string>
+    <string name="postal_code">Postal code</string>
+    <string name="birthday">Birthday</string>
+    <string name="gender">Gender</string>
+    <string name="employment">Employment</string>
+    <string name="mother">Mother</string>
+    <string name="save">Save</string>
+    <string name="tempat_lahir">Tempat lahir</string>
+    <string name="tambah_peternak">Tambah Peternak</string>
+    <string name="_select_provinsi_">-select provinsi-</string>
+    <string name="_select_kabupaten_">-select kabupaten-</string>
+    <string name="_select_kecamatan_">-select kecamatan-</string>
+    <string name="_select_desa_">-select village-</string>
+    <string name="_select_status_pernikahan_">-select status pernikahan-</string>
+    <string name="_select_gender_">-select gender-</string>
+    <string name="_select_religion_">-select religion-</string>
+    <string name="_select_level_">-select level-</string>
+    <string name="koordinator_pusat">Koordinator pusat</string>
+    <string name="koordinator_provinsi">Koordinator provinsi</string>
+    <string name="koordinator_kabupaten">Koordinator kabupaten</string>
+    <string name="peternak">Peternak</string>
+    <string name="please_enter_valid_name">Enter name as on ID card</string>
+    <string name="invalid_id_card">Invalid ID card</string>
+    <string name="invalid_phone_number">Invalid phone number</string>
+    <string name="invalid_email_address">Invalid email address</string>
+    <string name="data_usaha">Data Usaha</string>
+    <string name="data_peternak_camel">Data Peternak</string>
+    <string name="data_usaha_camel">Data Usaha</string>
+    <string name="nama_usaha">Nama usaha</string>
+    <string name="please_select_kabupaten">Please select kabupaten</string>
+    <string name="please_select_kecamatan">Please select kecamatan</string>
+    <string name="please_select_desa">Please select desa</string>
+    <string name="email_address_peternakan">Peternakan email address</string>
+    <string name="no_hp_peternakan">Peternakan phone number</string>
+    <string name="_select_status_peternakan_">Select status peternakan</string>
+    <string name="please_select_status_peternakan">Please select status peternakan</string>
+    <string name="_select_status_kelompok_">-select kelompok -</string>
+    <string name="_select_kelompok_">-select kelompok-</string>
+    <string name="please_select_individu_or_kelompok">Please select individu or kelompok</string>
+    <string name="please_select_nama_kelompok">Please select nama kelompok</string>
+    <string name="_select_nama_kelompok_">-select nama kelompok-</string>
+    <string name="lokasi_usaha">Lokasi usaha</string>
+    <string name="_select_jenis_komoditas_">-select commodity type-</string>
+    <string name="please_select_jenis_komoditas">Please select jenis komoditas</string>
+    <string name="_select_jenis_usaha_">-select jenis usaha-</string>
+    <string name="please_select_jenis_usaha">Please select jenis usaha</string>
+    <string name="_select_produk_penjualan_">-select produk penjualan-</string>
+    <string name="_select_nama_olahan_">-select nama olahan-</string>
+    <string name="please_reload_the_page">The page is not loaded completelly. Please reopen the page
+	</string>
+    <string name="pass_photo">Pass foto</string>
+    <string name="need_to_access_media_storage">The app need to access media storage</string>
+    <string name="nama_olahan">Nama olahan</string>
+    <string name="uploading">Uploading… \n%s</string>
+    <string name="done">Done</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="upload_failed">Upload failed</string>
+    <string name="tambah_data_ternak">Add Ternak Data</string>
+    <string name="tempat_lahir_ternak" translatable="false">Tempat lahir ternak</string>
+    <string name="tanggal_lahir_ternak" translatable="false">Tanggal lahir ternak</string>
+    <string name="asal_ternak" translatable="false">Asal ternak</string>
+    <string name="_select_nama_ternak_">-select nama ternak-</string>
+    <string name="_select_jenis_ternak_">-select jenis ternak-</string>
+    <string name="_select_bangsa_ternak_">-select rumpun ternak-</string>
+    <string name="_select_metode_perkawinan_">-select metode perkawinan-</string>
+    <string name="_select_tipe_kelahiran_">-select tipe kelahiran-</string>
+    <string name="_select_jenis_kelamin_ternak_">-select jenis kelamin-</string>
+    <string name="id_eartek">Id eartag</string>
+    <string name="please_select_nama_ternak">Please select ternak name</string>
+    <string name="please_select_bangsa_ternak">Please select rumpun ternak</string>
+    <string name="please_select_jenis_ternak">Please select jenis ternak</string>
+    <string name="please_select_jenis_kelamin_ternak">Please select ternak gender</string>
+    <string name="please_select_birthday">Please select birthday</string>
+    <string name="please_select_metode_perkawinan">Select perkawinan method</string>
+    <string name="detail" translatable="false">Detail</string>
+    <string name="data_recording" translatable="false">Data recording</string>
+    <string name="hapus" translatable="false">Hapus data ternak</string>
+    <string name="rangking" translatable="false">Rangking</string>
+    <string name="data_sapi" translatable="false">Data sapi</string>
+    <string name="title_activity_edit_profile" translatable="false">Edit Profil</string>
+    <string name="action_settings" translatable="false">Settings</string>
+    <string name="update_status_ternak_menjadi" translatable="false">Update status ternak %1$s
+		menjadi\n%2$s
+	</string>
+    <string name="youtube_api_key" translatable="false">AIzaSyDxFFjZEIIkRaThDC32Kq1EFotjCCkjWr0
+	</string>
+    <string name="pemilik" translatable="false">Pemilik</string>
+    <string name="id_ternak" translatable="false">ID ternak</string>
+    <string name="tambah_ternak_ib" translatable="false">Tambah Ternak IB</string>
+    <string name="rumpun" translatable="false">Rumpun</string>
+    <string name="id_peternak" translatable="false">ID Peternak</string>
+    <string name="nama_peternak" translatable="false">Nama Peternak</string>
+    <string name="nomor_straw" translatable="false">Nomor Straw</string>
+    <string name="kondisi_ternak" translatable="false">Kondisi Ternak</string>
+    <string name="tanggal_ib" translatable="false">Tanggal IB</string>
+    <string name="simpan" translatable="false">Simpan</string>
+    <string name="keterangan" translatable="false">Keterangan</string>
+    <string name="_pilih_kategori_ternak_" translatable="false">-pilih kategori ternak-</string>
+    <string name="pilih_user" translatable="false">Pilih User</string>
+    <string name="title_activity_lihat_sertifikat">FullscreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_kuantitatif">KuantitatifActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>

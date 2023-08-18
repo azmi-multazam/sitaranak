@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/navigation_petugas"
+        android:icon="@drawable/ic_group"
+        android:title="Petugas" />
+
+    <item
+        android:id="@+id/navigation_data_ternak"
+        android:icon="@drawable/ic_receipt"
+        android:title="Data ternak" />
+
+    <item
+        android:id="@+id/navigation_sertifikat"
+        android:icon="@drawable/ic_baseline_assignment_ind_24"
+        android:title="Setting SKLB" />
+
+</menu>

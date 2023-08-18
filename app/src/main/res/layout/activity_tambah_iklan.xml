@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/appbar_and_toolbar" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="3dp"
+            app:cardElevation="2dp"
+            app:cardUseCompatPadding="true">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="8dp"
+                android:stretchColumns="1">
+
+                <TableRow
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+                    <TextView android:text="Gambar" />
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:adjustViewBounds="true"
+                        android:background="@drawable/selector_stroke_white_bg"
+                        android:maxHeight="150dp"
+                        android:scaleType="centerInside"
+                        app:srcCompat="@drawable/selector_ic_add_photo" />
+
+
+                </TableRow>
+
+                <TableRow
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+                    <TextView android:text="Judul iklan" />
+
+                    <EditText
+                        android:id="@+id/editTextToko"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_stroke_white_bg"
+                        android:ems="10"
+                        android:inputType="textCapWords"
+                        android:padding="5dp" />
+                </TableRow>
+
+                <TableRow
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+                    <TextView android:text="Harga" />
+
+                    <EditText
+                        android:id="@+id/editTextHarga"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_stroke_white_bg"
+                        android:ems="10"
+                        android:inputType="number"
+                        android:padding="5dp" />
+                </TableRow>
+
+                <TableRow
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+                    <TextView android:text="Kategory" />
+
+                    <FrameLayout
+                        android:id="@+id/frameLayoutSpinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1">
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/spinner"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/selector_stroke_white_bg" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBarSpinner"
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:layout_gravity="end|center_vertical"
+                            android:layout_marginEnd="5dp"
+                            android:layout_marginRight="5dp"
+                            android:visibility="invisible" />
+                    </FrameLayout>
+                </TableRow>
+
+                <TableRow android:padding="5dp">
+
+                    <TextView android:text="Keterangan" />
+
+                    <EditText
+                        android:id="@+id/editTextKeterangan"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_stroke_white_bg"
+                        android:ems="10"
+                        android:gravity="start"
+                        android:inputType="textCapSentences|textMultiLine"
+                        android:minHeight="100dp"
+                        android:padding="5dp" />
+                </TableRow>
+
+                <TableRow
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+                    <View />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/button"
+                            style="@style/AppTheme.ButtonTextView"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="10dp"
+                            android:text="Simpan" />
+                    </FrameLayout>
+
+                </TableRow>
+            </TableLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

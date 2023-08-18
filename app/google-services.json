@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "41369961912",
+    "project_id": "sidik-714dc",
+    "storage_bucket": "sidik-714dc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41369961912:android:d4ff06ce808bb165397b4d",
+        "android_client_info": {
+          "package_name": "com.zam.sidik_padang"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41369961912-35sn4aflkkonl4ltb0ran0p4gsdqg8a3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD5tKAtd0cmuNXXCcLT25Dg_4JxCKRlw_g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41369961912-35sn4aflkkonl4ltb0ran0p4gsdqg8a3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

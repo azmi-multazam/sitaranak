@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:paddingTop="@dimen/list_item_spacing_half"
+    android:paddingBottom="@dimen/list_item_spacing_half"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".home.dataternak.scanner.ScanDialogFragment">
+
+    <RelativeLayout
+        android:id="@+id/scan"
+        android:layout_width="300dp"
+        android:layout_height="300dp">
+
+        <com.journeyapps.barcodescanner.DecoratedBarcodeView
+            android:id="@+id/barcode_scanner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            app:zxing_scanner_layout="@layout/include_custom_scanner" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:gravity="center"
+            android:text="Tekan dan tahan garis hijau untuk fokus ke barcode"
+            android:textColor="@color/mdtp_white" />
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/flash"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:scaleType="center"
+        app:srcCompat="@drawable/ic_flash_off_black_24dp"
+        android:contentDescription="null"
+        app:tint="@color/black_1" />
+</LinearLayout>

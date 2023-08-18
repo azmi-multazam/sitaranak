@@ -1,0 +1,45 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/activity_main_navigationview_home"
+            android:icon="@drawable/ic_blur_circular"
+            android:title="Home" />
+        <item
+            android:id="@+id/activity_main_navigationview_profilku"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="Profilku" />
+        <!--<item
+            android:icon="@drawable/ic_people_black_24dp"
+            android:id="@+id/activity_main_navigationview_anggota"
+            android:title="Anggota"/>-->
+        <item
+            android:id="@+id/activity_main_navigationview_sapiku"
+            android:icon="@drawable/ic_sapi_kepala"
+            android:title="Sapiku" />
+        <item
+            android:id="@+id/activity_main_navigationview_ubah_kata_sandi"
+            android:icon="@drawable/ic_ubah_kata_sandi"
+            android:title="Ubah Kata Sandi" />
+        <!--
+        <item
+            android:id="@+id/activity_main_navigationview_kegiatan"
+            android:icon="@drawable/ic_kegiatan"
+            android:title="Kegiatan Hari Ini" />
+        <item
+            android:id="@+id/activity_main_navigationview_bantuan"
+            android:icon="@drawable/ic_help"
+            android:title="Bantuan" />
+        <item
+            android:id="@+id/activity_main_navigationview_info_aplikasi"
+            android:icon="@drawable/ic_info"
+            android:title="Info Aplikasi" />
+            -->
+
+    </group>
+
+    <item
+        android:id="@+id/activity_main_navigationview_logout"
+        android:icon="@drawable/ic_power"
+        android:title="@string/logout" />
+</menu>

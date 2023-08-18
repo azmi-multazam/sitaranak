@@ -1,0 +1,88 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/item_history_tagihan_TextViewTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/primaryLight"
+            android:paddingBottom="10dp"
+            android:paddingEnd="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp"
+            android:text="BPJS - 8000018163547"
+            android:textColor="@color/textPrimary"
+            android:fontFamily="@font/nunito_black"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="10dp"
+            android:paddingEnd="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="10dp">
+
+            <TableRow>
+
+                <TextView
+                    android:textColor="@color/black_1"
+                    android:text="Atas nama" />
+
+                <TextView
+                    android:id="@+id/item_history_tagihan_TextViewAtasNama"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:textColor="@color/black_1"
+                    android:text=": -" />
+            </TableRow>
+
+            <TableRow android:gravity="center_vertical">
+
+                <TextView
+                    android:textColor="@color/black_1"
+                    android:text="Total" />
+
+                <TextView
+                    android:id="@+id/item_history_tagihan_TextViewTotalTagihan"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginStart="10dp"
+                    android:text=": Rp. 150.000"
+                    android:textSize="16sp"
+                    android:textColor="@color/black_1"
+                    android:textStyle="bold" />
+            </TableRow>
+        </TableLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/item_history_tagihan_Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="7dp"
+            android:text="Bayar" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>    <!--{"id":"47",
+						 "produk":"BPJS",
+						 "idpel":"0001724232251",
+						 "idtagihan":"0",
+						 "namapel":"0",
+						 "periode":"0",
+						 "total":0,
+						 "status":"Cek Ulang"
+						}-->

@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="11dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPadding="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Data Kelahiran"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nunito_black"
+                        android:textColor="@color/black_1"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/colorGreySoft" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*">
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:text="Tanggal Lahir" />
+
+                            <TextView
+                                android:id="@+id/fragment_data_sapi_TextViewTAnggalLahir"
+                                android:textColor="@color/black_1"
+                                android:text="Tangga Lahir" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:text="Berat" />
+
+                            <TextView
+                                android:id="@+id/fragment_data_sapi_TextViewBBLAhir"
+                                android:textColor="@color/black_1" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:text="Panjang" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_data_sapi_TextViewPbLAhir" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:text="Tinggi" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_data_sapi_TextViewTgLAhir" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:text="Lingkar Dada" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_data_sapi_TextViewLingkarDada" />
+                        </TableRow>
+
+                        <!--[{"lahir":"2003-12-28",
+                              "bb_lahir":"21",
+                              "pb_lahir":"",
+                              "tg_lahir":"",
+                              "lingkar_dada":"",
+                              "tgl_sapih":"20\/07\/2004",
+                              "bb_sapih":"77.80"}-->
+                    </TableLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPadding="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Data Sapih 205 Hari"
+                        android:textColor="@color/black_1"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nunito_black"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/colorGreySoft" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*">
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:text="Tanggal Sapih" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_data_sapi_TextViewTanggalSapi2" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:text="Berat Badan Sapih" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_data_sapi_TextViewBBSapih2" />
+                        </TableRow>
+
+                        <!--{"data_sapih":[{
+                        "lahir":"2003-12-28",
+                        "bb_lahir":"21",
+                        "pb_lahir":"",
+                        "tg_lahir":"",
+                        "lingkar_dada":"",
+                        "tgl_sapih":"20\/07\/2004",
+                        "bb_sapih":"77.80"}-->
+                    </TableLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:contentPadding="16dp"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="6dp"
+                app:cardUseCompatPadding="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Data 365 Hari"
+                        android:textSize="16sp"
+                        android:fontFamily="@font/nunito_black"
+                        android:textColor="@color/black_1"
+                        android:textStyle="bold" />
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginTop="12dp"
+                        android:layout_marginBottom="12dp"
+                        android:background="@color/colorGreySoft" />
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:stretchColumns="*">
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:text="Tanggal" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_data_sapi_TextViewTanggal365" />
+                        </TableRow>
+
+                        <TableRow>
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+
+                            <View
+                                android:layout_height="1dp"
+                                android:background="@color/colorGreySoft" />
+                        </TableRow>
+
+                        <TableRow android:padding="5dp">
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:text="Berat Badan" />
+
+                            <TextView
+                                android:textColor="@color/black_1"
+                                android:id="@+id/fragment_data_sapi_TextViewBB365" />
+                        </TableRow>
+
+                        <!--{"0":"2005-01-11",
+                             "1":"2004-12-14",
+                             "lahir":"28 Des 2003",
+                             "bb_lahir":"21",
+                             "pb_lahir":"",
+                             "tg_lahir":"",
+                             "lingkar_dada":"",
+                             "tgl_sapih":"20 Jul 2004",
+                             "bb_sapih":"77.80",
+                             "tgl_365":"27 Des 2004",
+                             "bb_365":"110.93-->
+                    </TableLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/fragment_data_sapi_Progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+</FrameLayout>

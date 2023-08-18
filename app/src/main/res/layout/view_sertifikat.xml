@@ -1,0 +1,492 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.moagrius.widget.ScalingScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scalingscrollview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layoutSertifikat"
+        android:layout_width="877dp"
+        android:layout_height="620dp"
+        android:orientation="vertical"
+        android:background="@drawable/bg_sklb_biru">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="90dp"
+                android:layout_height="90dp"
+                android:layout_marginEnd="40dp"
+                android:src="@drawable/kab_pamekasan" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:includeFontPadding="false"
+                    android:textColor="@color/colorSklb"
+                    android:text="SURAT KETERANGAN LAYAK BIBIT" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="30dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:includeFontPadding="false"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorSklb"
+                    android:text="Ternak sapi potong" />
+
+                <TextView
+                    android:id="@+id/noSurat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="16dp"
+                    android:fontFamily="monospace"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:textColor="@color/colorSklb"
+                    android:text="NO: 1234567" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="660dp"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="24dp">
+
+            <ImageView
+                android:id="@+id/foto"
+                android:layout_width="160dp"
+                android:layout_height="110dp"
+                android:src="@drawable/sapi1"
+                android:layout_marginEnd="20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="2">
+
+                    <TableRow>
+
+                        <TextView
+                            android:text="No. Kode Verifikasi"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:text=" : "
+                            android:textSize="13dp"
+                            android:textColor="@color/colorSklb"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:id="@+id/kodefikasi"
+                            android:textSize="13dp"
+                            android:textColor="@color/colorSklb"
+                            android:fontFamily="@font/nunito_black" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:text="Rumpun Murni"
+                            android:textSize="13dp"
+                            android:textColor="@color/colorSklb"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:text=" : "
+                            android:textSize="13dp"
+                            android:textColor="@color/colorSklb"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:id="@+id/rumpunMurni"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_black" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:text="Jenis Kelamin"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:text=" : "
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:id="@+id/jenisKelamin"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_black" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:text="Nama Bapak (Ternak Hasil Kawin Alam)"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:text=" : "
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:id="@+id/bapak"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_black" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:text="Nama Induk (Ternak Hasil Kawin Alam)"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:text=" : "
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:id="@+id/metodePerkawinan"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_black" />
+                    </TableRow>
+
+                    <TableRow>
+
+                        <TextView
+                            android:text="Umur Ternak"
+                            android:textSize="13dp"
+                            android:textColor="@color/colorSklb"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:text=" : "
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:id="@+id/umur"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_black" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="720dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="70dp"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:id="@+id/info_sapi"
+                android:layout_width="400dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:stretchColumns="*">
+
+                    <TableRow>
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Tinggi Gumba\n(cm)"
+                            android:background="@drawable/bg_head"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Panjang Badan\n(cm)"
+                            android:background="@drawable/bg_head"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:layout_weight="1"
+                            android:text="Lingkar Dada\n(cm)"
+                            android:background="@drawable/bg_head"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/nunito_bold" />
+
+                        <TextView
+                            android:id="@+id/lsHead"
+                            android:layout_weight="1"
+                            android:text="Lingkar Scrotum (cm)\n(untuk pejantan)"
+                            android:background="@drawable/bg_head"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="12dp"
+                            android:fontFamily="@font/nunito_bold" />
+                    </TableRow>
+
+                    <TableRow android:background="@color/mdtp_white">
+
+                        <TextView
+                            android:id="@+id/tinggiGumba"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorSklb"
+                            android:background="@drawable/bg_cell"
+                            android:gravity="center_horizontal"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_black" />
+
+                        <TextView
+                            android:id="@+id/panjangBadan"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:background="@drawable/bg_cell"
+                            android:textColor="@color/colorSklb"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_black" />
+
+                        <TextView
+                            android:id="@+id/lingkarDada"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorSklb"
+                            android:background="@drawable/bg_cell"
+                            android:gravity="center_horizontal"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_black" />
+
+                        <TextView
+                            android:id="@+id/lingkarScrotum"
+                            android:layout_weight="1"
+                            android:textColor="@color/colorSklb"
+                            android:background="@drawable/bg_cell"
+                            android:gravity="center_horizontal"
+                            android:textSize="13dp"
+                            android:fontFamily="@font/nunito_black" />
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+
+            <TableLayout
+                android:id="@+id/info_pemilik"
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/info_sapi"
+                android:layout_marginTop="12dp"
+                android:stretchColumns="2">
+
+                <TableRow>
+
+                    <TextView
+                        android:text="Pemilik"
+                        android:textColor="@color/colorSklb"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/nunito_bold" />
+
+                    <TextView
+                        android:text=" : "
+                        android:textSize="13dp"
+                        android:textColor="@color/colorSklb"
+                        android:fontFamily="@font/nunito_bold" />
+
+                    <TextView
+                        android:id="@+id/pemilik"
+                        android:textSize="13dp"
+                        android:textColor="@color/colorSklb"
+                        android:fontFamily="@font/nunito_black" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:text="Alamat"
+                        android:textSize="13dp"
+                        android:textColor="@color/colorSklb"
+                        android:fontFamily="@font/nunito_bold" />
+
+                    <TextView
+                        android:text=" : "
+                        android:textSize="13dp"
+                        android:textColor="@color/colorSklb"
+                        android:fontFamily="@font/nunito_bold" />
+
+                    <TextView
+                        android:id="@+id/alamat"
+                        android:layout_width="wrap_content"
+                        android:textColor="@color/colorSklb"
+                        android:textSize="13dp" />
+                </TableRow>
+            </TableLayout>
+
+            <LinearLayout
+                android:layout_width="260dp"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_alignParentBottom="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Catatan:"
+                    android:textSize="13dp"
+                    android:fontFamily="@font/nunito_black"
+                    android:textStyle="italic"
+                    android:textColor="@color/colorSklb" />
+
+                <View
+                    android:layout_width="80dp"
+                    android:layout_height="1dp"
+                    android:background="@color/colorSklb" />
+
+                <TextView
+                    android:id="@+id/catatan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="12dp"
+                    android:fontFamily="@font/nunito_bold"
+                    android:textStyle="italic"
+                    android:textColor="@color/colorSklb" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true">
+                <LinearLayout
+                    android:id="@+id/dinas"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tanggal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/colorSklb"
+                        android:textSize="13dp"
+                        android:layout_gravity="center_horizontal"
+                        android:text="Padang, 21 September 2022" />
+
+                    <TextView
+                        android:id="@+id/jabatan"
+                        android:layout_width="280dp"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/colorSklb"
+                        android:textSize="13dp"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center_horizontal"
+                        android:text="KEPALA DINAS KETAHANAN PANGAN DAN PERTANIAN KABUPATEN Padang" />
+
+                    <TextView
+                        android:id="@+id/kadin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="60dp"
+                        android:textColor="@color/colorSklb"
+                        android:textSize="13dp"
+                        android:layout_gravity="center_horizontal"
+                        android:fontFamily="@font/nunito_black"
+                        android:paddingStart="4dp"
+                        android:paddingEnd="4dp"
+                        android:paddingBottom="2dp"
+                        android:background="@drawable/bg_underline_transparent"
+                        android:text="NAMA" />
+
+                    <TextView
+                        android:id="@+id/nip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13dp"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@color/colorSklb"
+                        android:layout_gravity="center_horizontal"
+                        android:text="NIP:" />
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/ttdDinas"
+                    android:layout_width="180dp"
+                    android:layout_height="130dp"
+                    android:layout_alignBottom="@id/dinas"
+                    android:layout_centerHorizontal="true" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="40dp"
+                android:layout_below="@id/info_sapi"
+                android:layout_marginTop="24dp"
+                android:layout_toEndOf="@id/info_pemilik"
+                android:padding="1dp"
+                android:background="@drawable/bg_line_black">
+                <TextView
+                    android:id="@+id/grade"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:gravity="center"
+                    android:fontFamily="@font/nunito_black"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    android:background="@color/black" />
+                <ImageView
+                    android:id="@+id/barcode"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:layout_gravity="center_horizontal"/>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</com.moagrius.widget.ScalingScrollView>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="1dp"
+        app:cardUseCompatPadding="true">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:contentDescription="Gambar Toko"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/ic_store" />
+    </androidx.cardview.widget.CardView>
+
+    <TextView
+        android:id="@+id/textViewNamaToko"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/cardView"
+        android:layout_toRightOf="@id/cardView"
+        android:paddingLeft="8dp"
+        android:paddingStart="8dp"
+
+        android:text="Text Nama Toko"
+        android:textColor="@color/textPrimary"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textViewKeterangan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewNamaToko"
+        android:layout_toEndOf="@id/cardView"
+        android:layout_toRightOf="@id/cardView"
+
+        android:padding="8dp" />
+
+    <TextView
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewKeterangan"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/cardView"
+        android:layout_toRightOf="@id/cardView"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:text="Tombol 1"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textViewKeterangan"
+        android:layout_marginLeft="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_toEndOf="@id/button1"
+        android:layout_toRightOf="@id/button1"
+        android:background="@color/colorPrimary"
+        android:padding="8dp"
+        android:text="Tombol 2"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white"
+        android:textSize="16sp" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_centerHorizontal="true"
+        android:layout_margin="20dp" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@id/button1"
+        android:layout_marginTop="8dp"
+        android:background="@color/colorPrimary" />
+</RelativeLayout>
+
+

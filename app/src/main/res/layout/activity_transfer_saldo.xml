@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:transitionName="transisi_transfer_saldo">
+
+    <include layout="@layout/appbar_and_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentPadding="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:text="Member ID tujuan" />
+
+                    <RelativeLayout
+
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_border_grey_accent">
+
+                        <ImageView
+                            android:id="@+id/activity_transfer_saldo_ImageViewCamera"
+                            android:layout_width="35dp"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:clickable="true"
+                            android:padding="7dp"
+                            android:src="@drawable/selector_ic_camera" />
+
+                        <EditText
+                            android:id="@+id/activity_transfer_saldo_EditTextIdTujuan"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentStart="true"
+                            android:layout_centerInParent="true"
+                            android:layout_toLeftOf="@id/activity_transfer_saldo_ImageViewCamera"
+                            android:layout_toStartOf="@id/activity_transfer_saldo_ImageViewCamera"
+                            android:background="@android:color/transparent"
+                            android:hint="ID"
+                            android:inputType="textCapCharacters"
+                            android:textColor="@color/black_1"
+                            android:padding="7dp" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ProgressBar
+                        android:id="@+id/activity_transfer_saldo_ProgressBarCheck"
+                        android:layout_width="14dp"
+                        android:layout_height="14dp"
+                        android:visibility="gone" />
+
+                    <TextView
+                        android:id="@+id/activity_transfer_saldo_TextViewCheck"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Checking..."
+                        android:textColor="@color/black_1"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:text="Nominal Rp" />
+
+                    <EditText
+                        android:id="@+id/activity_transfer_saldo_EditTextNominal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_border_grey_accent"
+                        android:hint="nominal"
+                        android:inputType="number"
+                        android:textColor="@color/black_1"
+                        android:padding="7dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="5dp">
+
+                    <TextView
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:text="PIN/token" />
+
+                    <EditText
+                        android:id="@+id/activity_transfer_saldo_EditTextPin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_border_grey_accent"
+                        android:hint="PIN"
+                        android:inputType="numberPassword"
+                        android:textColor="@color/black_1"
+                        android:padding="7dp" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView android:id="@+id/activity_transfer_saldo_ButtonKirim"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="1dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="KIRIM"
+                        android:textAllCaps="true"
+                        android:textColor="@android:color/white" />
+
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </ScrollView>
+
+</LinearLayout>
+

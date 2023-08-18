@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout android:name="com.zam.sidik_padang.dataternak.foto.FotoTernakFragment"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.zam.sidik_padang.util.customclasses.GridRecyclerView android:id="@+id/list"
+        android:name="com.zam.sidik_padang.dataternak.foto.FotoTernakFragment"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        tools:context="com.zam.sidik_padang.home.dataternak.detailternak.foto.FotoTernakFragment"
+        tools:listitem="@layout/item_fotot_ernak" />
+
+    <ProgressBar
+        android:id="@+id/fragment_fototernak_Progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="invisible" />
+
+    <com.zam.sidik_padang.util.customclasses.FAB
+        android:id="@+id/activity_fototernak_FAB"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        app:backgroundTint="@color/selector_primary_accent"
+        app:layout_behavior="com.zam.sidik_padang.home.kelompokternak.FABBehavor"
+        app:pressedTranslationZ="3dp"
+        app:srcCompat="@drawable/ic_add"
+        app:useCompatPadding="true" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

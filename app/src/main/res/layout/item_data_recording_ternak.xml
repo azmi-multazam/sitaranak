@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    app:contentPadding="16dp"
+    app:cardCornerRadius="12dp"
+    app:cardElevation="6dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/item_data_recording_ternak_ButttonDelete"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:foreground="?attr/selectableItemBackground"
+                android:scaleType="centerInside"
+                app:srcCompat="@drawable/selector_ic_delete" />
+
+            <TextView
+                android:id="@+id/item_data_recording_ternak_TextViewTanggal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/item_data_recording_ternak_ButttonDelete"
+                android:layout_toStartOf="@id/item_data_recording_ternak_ButttonDelete"
+                android:text="tanggal"
+                android:textColor="@color/black_1"
+                android:fontFamily="@font/nunito_black"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Berat badan"
+                        android:textColor="@color/black_1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item_data_recording_ternak_TextViewBeratBadan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black_1"
+                        android:layout_marginStart="10dp"
+                        android:textSize="12sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Panjang badan"
+                        android:textColor="@color/black_1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item_data_recording_ternak_TextViewPAnjangBadan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:textSize="12sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Tinggi badan"
+                        android:textColor="@color/black_1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item_data_recording_ternak_TextViewTinggiBadan"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
+                        android:textSize="12sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Lingkar dada"
+                        android:textColor="@color/black_1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item_data_recording_ternak_TextViewLingkarDada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black_1"
+                        android:layout_marginStart="10dp"
+                        android:textSize="12sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Dalam dada"
+                        android:textColor="@color/black_1"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/item_data_recording_ternak_TextViewDalamDada"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:textColor="@color/black_1"
+                        android:layout_marginStart="10dp"
+                        android:textSize="12sp" />
+                </TableRow>
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/item_data_recording_TextViewPbbh"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical|end"
+                android:background="@drawable/bg_pbbh"
+                android:gravity="center"
+                android:maxLines="1"
+                android:padding="5dp"
+                android:textColor="@color/black_1"
+                android:fontFamily="@font/nunito_bold"
+                android:text="0.00"
+                android:textStyle="bold" />
+        </FrameLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>    <!--{"id":"2",
+	* 	"tanggal":"2004-04-21",
+	* 	"berat_badan":"64.5",
+	* 	"panjang_badan":"76.5",
+	* 	"tinggi_badan":"84",
+	* 	"lingkar_dada":"93",
+	* 	"dalam_dada":"35.5"}-->

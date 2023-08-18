@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/action_info_group"
+        android:title="Info group" />
+
+    <!--<item
+        android:id="@+id/action_ubah_judul"
+        android:title="Ubah judul obrolan"/>
+
+    <item
+        android:id="@+id/action_tambahkan_anggota"
+        android:title="Tambahkan anggota"/>-->
+
+</menu>

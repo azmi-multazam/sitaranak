@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="?attr/selectableItemBackground"
+    android:layout_margin="4dp"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/thumb"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/ic_edit"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/selector_btn_primary" />
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_margin="4dp"
+                    android:background="@drawable/selector_btn_primary" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingEnd="8dp"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingStart="8dp">
+
+                <ImageView
+                    android:id="@+id/item_data_ternak_dibawahnya_ButttonDelete"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    android:scaleType="centerInside"
+                    app:srcCompat="@drawable/selector_ic_delete" />
+
+                <TextView
+                    android:id="@+id/item_data_ternak_dibawahnya_TextViewNama"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="6dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/black_1"
+                    android:layout_toLeftOf="@id/item_data_ternak_dibawahnya_ButttonDelete"
+                    android:fontFamily="@font/nunito_black"
+                    android:textSize="16sp"
+                    android:layout_toStartOf="@id/item_data_ternak_dibawahnya_ButttonDelete"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+            <TableLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="6dp"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp">
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/jenis"
+                        android:textColor="@color/black_1" />
+
+                    <TextView
+                        android:id="@+id/item_data_ternak_dibawahnya_TextViewJenis"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/bangsa"
+                        android:textColor="@color/black_1" />
+
+                    <TextView
+                        android:id="@+id/item_data_ternak_dibawahnya_TextViewBangsa"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/kelmain"
+                        android:textColor="@color/black_1" />
+
+                    <TextView
+                        android:id="@+id/item_data_ternak_dibawahnya_TextViewKelamin"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Umur"
+                        android:textColor="@color/black_1" />
+
+                    <TextView
+                        android:id="@+id/item_data_ternak_dibawahnya_TextViewUmur"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowPetugas"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Petugas"
+                        android:textColor="@color/black_1" />
+
+                    <TextView
+                        android:id="@+id/item_data_ternak_dibawahnya_TextViewPetugas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+                </TableRow>
+
+                <TableRow
+                    android:id="@+id/rowPemilik"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pemilik"
+                        android:textColor="@color/black_1" />
+
+                    <TextView
+                        android:id="@+id/item_data_ternak_dibawahnya_TextViewPemilik"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp" />
+                </TableRow>
+            </TableLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

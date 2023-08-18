@@ -1,0 +1,166 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/appbar_and_toolbar" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Batas Umur"
+                android:fontFamily="@font/nunito_black"
+                android:textColor="@color/black_1"
+                android:layout_margin="10dp"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="12dp"
+                app:cardElevation="4dp"
+                app:contentPadding="16dp"
+                app:cardUseCompatPadding="true">
+
+                <TableLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TableRow
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:text="Jantan Dewasa"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:textColor="@color/black_1"
+                            android:text=": >24 bulan" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:text="Induk Dewasa"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:textColor="@color/black_1"
+                            android:text=": >24 bulan" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:text="Jantan Muda"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:textColor="@color/black_1"
+                            android:text=": 12 - 24 bulan" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:text="Betina Dara"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:textColor="@color/black_1"
+                            android:text=": 12 - 24 bulan" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:text="Jantan Sapih"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:textColor="@color/black_1"
+                            android:text=": 6 - 12 bulan" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:text="Betina Sapih"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:textColor="@color/black_1"
+                            android:text=": 6 - 12 bulan" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:text="Jantan Pedet"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:textColor="@color/black_1"
+                            android:text=": 0 - 5 bulan" />
+                    </TableRow>
+
+                    <TableRow
+                        android:gravity="center_vertical"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:text="Betina Pedet"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:padding="5dp"
+                            android:textColor="@color/black_1"
+                            android:text=": 0 - 5 bulan" />
+                    </TableRow>
+                </TableLayout>
+            </androidx.cardview.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

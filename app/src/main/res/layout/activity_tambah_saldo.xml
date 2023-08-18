@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:transitionName="transisi_tambah_saldo">
+
+    <include layout="@layout/appbar_and_toolbar" />
+
+    <ScrollView
+        android:id="@+id/activity_tambah_saldo_ScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:paddingBottom="16dp"
+        android:paddingTop="16dp">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentPadding="16dp"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="6dp"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:id="@+id/activity_tambah_saldo_LinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black_1"
+                        android:text="Nilai deposit" />
+
+                    <EditText
+                        android:id="@+id/activity_tambah_saldo_EditTextNominal"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_border_grey_accent"
+                        android:hint="Masukkan nilai rupiah"
+                        android:inputType="number"
+                        android:textColor="@color/black_1"
+                        android:padding="5dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:textColor="@color/black_1"
+                        android:text="Berita" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_tambah_saldo_EditTextBerita"
+                        android:layout_width="0dp"
+                        android:layout_height="100dp"
+                        android:layout_gravity="end|center_vertical"
+                        android:layout_marginBottom="7dp"
+                        android:layout_marginTop="7dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/selector_border_grey_accent"
+                        android:gravity="top"
+                        android:hint="isi berita"
+                        android:inputType="textMultiLine"
+                        android:paddingBottom="5dp"
+                        android:paddingEnd="9dp"
+                        android:paddingLeft="9dp"
+                        android:paddingRight="9dp"
+                        android:paddingStart="9dp"
+                        android:textColor="@color/black_1"
+                        android:paddingTop="5dp" />
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:padding="5dp">
+
+                        <TextView
+                            android:layout_width="135dp"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/black_1"
+                            android:text="Pilih bank" />
+
+                        <androidx.appcompat.widget.AppCompatSpinner
+                            android:id="@+id/activity_tambah_saldo_SpinnerPilihBank"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/selector_border_grey_accent" />
+                    </LinearLayout>
+
+                    <ProgressBar
+                        android:id="@+id/activity_tambah_saldo_ProgressbarspinnerPilihBank"
+                        style="?android:attr/progressBarStyleSmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="32dp"
+                        android:layout_marginStart="32dp"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="5dp">
+
+                    <TextView
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_1"
+                        android:text="Kode PIN" />
+
+                    <EditText
+                        android:id="@+id/activity_tambah_saldo_EditTextPin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/selector_border_grey_accent"
+                        android:enabled="false"
+                        android:hint="PIN"
+                        android:inputType="numberPassword"
+                        android:textColor="@color/black_1"
+                        android:padding="7dp" />
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView android:id="@+id/activity_tambah_saldo_ButtonRequest"
+                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="30dp"
+                    android:clickable="true"
+                    android:foreground="?attr/selectableItemBackground"
+                    app:cardBackgroundColor="@color/colorPrimary"
+                    app:cardCornerRadius="30dp"
+                    app:cardElevation="1dp"
+                    app:cardUseCompatPadding="true">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:text="Request"
+                        android:textAllCaps="true"
+                        android:fontFamily="@font/nunito_bold"
+                        android:textColor="@android:color/white" />
+                </androidx.cardview.widget.CardView>
+
+                <TextView
+                    android:id="@+id/activity_tambah_saldo_TextViewDetailBank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="16dp"
+                    android:textColor="@color/textPrimary"
+                    android:textSize="18sp" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+
+</LinearLayout>

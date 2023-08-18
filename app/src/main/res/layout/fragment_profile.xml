@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/windowBackground">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/profile_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:fitsSystemWindows="true">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="90dp"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/wave_top" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical">
+
+                    <com.zam.sidik_padang.util.customclasses.ImageViewBulat
+                        android:id="@+id/header_activity_main_ImageView"
+                        android:layout_width="120dp"
+                        android:layout_height="120dp"
+                        android:scaleType="centerCrop"
+                        app:border_ring="4dp"
+                        app:border_warna="@color/primaryLight"
+                        app:srcCompat="@drawable/ic_account_circle_white" />
+
+                    <TextView
+                        android:id="@+id/fragment_profile_TesxViewUserName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="Ferry Irwan"
+                        android:textColor="@color/colorAccent"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/fragment_profile_TesxViewUserId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal"
+                        android:text="KS1000005"
+                        android:textColor="@color/black_1" />
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/paging"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/header"
+                android:layout_marginStart="8dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btn_ternak"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_btn_outline_primary"
+                    android:layout_margin="2dp"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:textColor="@color/selector_text_white"
+                    android:text="Peternak" />
+
+                <Button
+                    android:id="@+id/btn_usaha"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/selector_btn_outline_primary"
+                    android:textColor="@color/selector_text_white"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:text="Usaha" />
+
+                <Button
+                    android:id="@+id/btn_alamat"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_margin="2dp"
+                    android:background="@drawable/selector_btn_outline_primary"
+                    android:textColor="@color/selector_text_white"
+                    android:textStyle="bold"
+                    android:textSize="12sp"
+                    android:text="Alamat" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clipToPadding="false"
+                android:orientation="vertical"
+                android:layout_below="@id/paging"
+                android:animateLayoutChanges="true"
+                android:padding="6dp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile_data_peternak"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:contentPadding="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:textColor="@color/black_1"
+                            android:text="Data Peternak"
+                            android:fontFamily="@font/nunito_black"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGreySoft" />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Agama"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewAgama"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Umur"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewUmur"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/no_ktp"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewNoKTP"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/no_hp"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewNoHP"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/desa"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewDesa"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/kecamatan"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewKecamatan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/kabupaten"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewKabupaten"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/region"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewProvinsi"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:text="" />
+
+                            </TableRow>
+
+                            <!--
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/level"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewLevel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:text="4"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/kelompok"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewKelompok"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:text=""
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/kelompok_ternak"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewKelompokTernak"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:text="" />
+
+                            </TableRow>
+                            -->
+
+                        </TableLayout>
+                    </LinearLayout>
+                    <!--
+                                            <ImageViewBulat
+                                                android:id="@+id/edit_data_ternak"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_gravity="end"
+                                                android:clickable="true"
+                                                android:foreground="?attr/selectableItemBackground"
+                                                android:padding="5dp"
+                                                android:tint="@android:color/white"
+                                                app:bgColor="@color/colorButtonLogin"
+                                                app:border_warna="@color/colorButtonLogin"
+                                                app:srcCompat="@drawable/ic_edit"/>
+                    -->
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile_data_usaha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:contentPadding="8dp"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    app:cardUseCompatPadding="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp"
+                            android:fontFamily="@font/nunito_black"
+                            android:text="@string/data_usaha"
+                            android:textColor="@color/black_1"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:background="@color/colorGreySoft" />
+
+                        <TableLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="10dp">
+
+                            <TableRow
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="@string/nama_usaha"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewNamaUsaha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Status"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewStatus"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Nomor Telepon"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewNoTelepon"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:text="E-Mail"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewEmail"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Komoditas"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewKomoditas"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Jenis Usaha"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewJenisUsaha"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp" />
+
+                            </TableRow>
+
+                            <TableRow>
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Produk Penjualan"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:textStyle="bold" />
+
+                                <TextView
+                                    android:id="@+id/fragment_profile_TextViewProdukPenjualan"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="4dp"
+                                    android:textColor="@color/black_1"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginStart="10dp"
+                                    android:text="" />
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                    <!--
+                                            <ImageViewBulat
+                                                android:id="@+id/edit_data_usaha"
+                                                android:layout_width="40dp"
+                                                android:layout_height="40dp"
+                                                android:layout_gravity="end"
+                                                android:clickable="true"
+                                                android:foreground="?attr/selectableItemBackground"
+                                                android:padding="5dp"
+                                                android:tint="@android:color/white"
+                                                app:bgColor="@color/colorButtonLogin"
+                                                app:border_warna="@color/colorButtonLogin"
+                                                app:srcCompat="@drawable/ic_edit"/>
+                    -->
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/profile_data_alamat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="6dp"
+                    app:cardUseCompatPadding="true">
+
+                    <fragment
+                        android:id="@+id/fragment_profile_MapView"
+                        android:name="com.zam.sidik_padang.profilku.MyMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp" />
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+            <!--<android.support.design.widget.FloatingActionButton
+                android:layout_alignBottom="@id/header"
+                android:translationY="30dp"
+                android:layout_margin="16dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:id="@+id/fragment_profile_FAB"
+                android:tint="@color/selector_white_accent"
+                app:srcCompat="@drawable/ic_edit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"/>-->
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <ProgressBar
+        android:id="@+id/fragment_profile_ProgressBar"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+</FrameLayout>
+

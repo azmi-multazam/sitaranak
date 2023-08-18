@@ -1,0 +1,3 @@
+<resources>
+    <dimen name="dialog_margin">200sp</dimen>
+</resources>

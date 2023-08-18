@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="12dp">
+
+    <LinearLayout
+        android:id="@+id/konten"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="12dp"
+        android:background="@drawable/bg_box">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Bulan" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Min" />
+
+            <EditText
+                android:id="@+id/bulanMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:inputType="number"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="36dp"
+                android:layout_height="2dp"
+                android:background="@color/white_trans" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Maks" />
+
+            <EditText
+                android:id="@+id/bulanMax"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:inputType="number"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:fontFamily="@font/nunito_bold"
+            android:text="Hari" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Min" />
+
+            <EditText
+                android:id="@+id/hariMin"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:inputType="number"
+                android:layout_height="wrap_content" />
+
+            <View
+                android:layout_width="36dp"
+                android:layout_height="2dp"
+                android:background="@color/white_trans" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Maks" />
+
+            <EditText
+                android:id="@+id/hariMax"
+                android:layout_width="0dp"
+                android:layout_weight="2"
+                android:inputType="number"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="18dp"
+            android:background="@color/colorGreySoft" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nunito_lightitalic"
+            android:text="* biarkan 0 jika tidak digunakan" />
+    </LinearLayout>
+</RelativeLayout>

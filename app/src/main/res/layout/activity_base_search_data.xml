@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include layout="@layout/appbar_and_toolbar" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/bg_half_round_top" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/activity_base_search_data_RecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:paddingBottom="16dp"
+            android:paddingEnd="16dp"
+            android:paddingLeft="16dp"
+            android:paddingRight="16dp"
+            android:paddingStart="16dp"
+            android:paddingTop="90dp"
+            tools:listitem="@layout/item_ternak_ib"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_half_round_top"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selector_stroke_white_bg"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingEnd="3dp"
+                    android:paddingRight="3dp">
+
+                    <ImageView
+                        android:id="@+id/left"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_marginStart="16dp"
+                        android:layout_marginEnd="4dp"
+                        android:layout_marginRight="4dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/ic_sapi_kepala" />
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:id="@+id/activity_base_search_data_ButtonScan"
+                        android:layout_width="40dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:background="@android:color/transparent"
+                        android:drawableLeft="@drawable/ic_camera"
+                        android:drawableStart="@drawable/ic_camera" />
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/activity_base_search_data_EditTextUserId"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/user_id"
+                        android:inputType="textCapCharacters"
+                        android:layout_centerVertical="true"
+                        android:layout_toStartOf="@id/activity_base_search_data_ButtonScan"
+                        android:layout_toEndOf="@id/left"
+                        android:padding="5dp"
+                        android:textSize="14sp" />
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/activity_base_search_data_TextViewRegion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginStart="3dp"
+                    android:background="@drawable/selector_stroke_white_bg"
+                    android:clickable="true"
+                    android:gravity="center"
+                    android:hint="@string/_by_region_"
+                    android:padding="5dp" />
+
+                <FrameLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent">
+
+                    <ImageButton
+                        android:id="@+id/activity_base_search_data_ButtonSearch"
+                        android:layout_width="50dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="3dp"
+                        android:layout_marginStart="3dp"
+                        android:background="@drawable/selector_stroke_white_bg"
+                        android:padding="10dp"
+                        android:text="@string/search"
+                        app:srcCompat="@drawable/ic_search_black" />
+
+                    <ProgressBar
+                        android:id="@+id/activity_base_search_data_ProgressBarButtonSearch"
+                        style="@android:style/Widget.DeviceDefault.Light.ProgressBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:visibility="invisible" />
+
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <ProgressBar
+            android:id="@+id/activity_data_ternak_ProgressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="invisible"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/activity_base_search_data_TextViewTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_margin="7dp"
+            android:background="@drawable/bordered_round_rect_shape"
+            android:padding="7dp"
+            android:text="Total --"
+            android:textStyle="bold"
+            android:visibility="invisible"
+            app:layout_behavior="com.zam.sidik_padang.util.customclasses.ShowHideBehavior" />
+
+        <!--<com.zam.sidik_padang.util.customclasses.FAB
+            android:id="@+id/activity_base_search_data_FAB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            app:layout_behavior="com.zam.sidik_padang.home.kelompokternak.FABBehavor"
+            app:pressedTranslationZ="3dp"
+            app:fab_colorNormal="#f8c300"
+            app:fab_colorPressed="@color/colorAccent"
+            android:src="@mipmap/ic_tambah_sapi"
+            android:scaleType="fitXY"
+            android:background="#f8c300"
+            />-->
+
+        <ImageView
+            android:id="@+id/activity_base_search_data_FAB"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:scaleType="fitXY"
+            android:src="@mipmap/ic_tambah_sapi" />
+
+        <TextView
+            android:id="@+id/textViewNoData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Tidak ada data"
+            android:visibility="invisible" />
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+    <!---->
+    <ScrollView
+        android:id="@+id/layoutDrawer"
+        android:layout_width="222dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:background="?android:attr/windowBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:visibility="gone">
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="11dp"
+                android:text="Jumlah Sapi"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/TextViewLoadingJumlahSapi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TableLayout
+                    android:id="@+id/tableLayoutJumlahSapi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="11dp"
+                    android:stretchColumns="0" />
+            </FrameLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="11dp"
+                android:padding="11dp"
+                android:text="Jumlah Kambing"
+                android:textStyle="bold" />
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/TextViewLoadingJumlahKambing"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center" />
+
+                <TableLayout
+                    android:id="@+id/tableLayoutJumlahKambing"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="11dp"
+                    android:stretchColumns="0" />
+            </FrameLayout>
+        </LinearLayout>
+    </ScrollView>
+</androidx.drawerlayout.widget.DrawerLayout>

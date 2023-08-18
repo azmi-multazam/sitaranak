@@ -1,0 +1,1685 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.sklb.setting.kuantitatif.EditKuantitatifActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        app:elevation="0dp"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="6dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="12dp"
+                android:padding="1dp"
+                android:background="@drawable/bg_box">
+
+                <androidx.gridlayout.widget.GridLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:columnCount="5">
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowSpan="2"
+                        app:fillBackground="@color/table_header"
+                        app:leftBorderColor="@color/warna1"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/warna1"
+                        app:topBorderWidth="0dp"
+                        app:rightBorderColor="@color/warna1"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/warna1"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="PARAM" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        app:layout_columnWeight="1"
+                        app:layout_rowSpan="2"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_header"
+                        app:leftBorderColor="@color/warna1"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/warna1"
+                        app:topBorderWidth="0dp"
+                        app:rightBorderColor="@color/warna1"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/warna1"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="KLS" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_rowSpan="2"
+                        android:orientation="vertical">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="24dp"
+                            android:layout_gravity="fill"
+                            app:fillBackground="@color/table_header"
+                            app:leftBorderColor="@color/warna1"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/warna1"
+                            app:topBorderWidth="0dp"
+                            app:rightBorderColor="@color/warna1"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/warna1"
+                            app:bottomBorderWidth="0dp">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textSize="12sp"
+                                android:fontFamily="@font/nunito_bold"
+                                android:text="UKURAN (cm)" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="24dp"
+                                app:fillBackground="@color/table_header"
+                                app:leftBorderColor="@color/warna1"
+                                app:leftBorderWidth="0dp"
+                                app:topBorderColor="@color/warna1"
+                                app:topBorderWidth="1dp"
+                                app:rightBorderColor="@color/warna1"
+                                app:rightBorderWidth="1dp"
+                                app:bottomBorderColor="@color/warna1"
+                                app:bottomBorderWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:text="min" />
+                            </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                            <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="24dp"
+                                app:fillBackground="@color/table_header"
+                                app:leftBorderColor="@color/warna1"
+                                app:leftBorderWidth="0dp"
+                                app:topBorderColor="@color/warna1"
+                                app:topBorderWidth="1dp"
+                                app:rightBorderColor="@color/warna1"
+                                app:rightBorderWidth="1dp"
+                                app:bottomBorderColor="@color/warna1"
+                                app:bottomBorderWidth="2dp">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:textSize="12sp"
+                                    android:fontFamily="@font/nunito_bold"
+                                    android:text="maks" />
+                            </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_rowSpan="2"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_header"
+                        app:leftBorderColor="@color/warna1"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/warna1"
+                        app:topBorderWidth="0dp"
+                        app:rightBorderColor="@color/warna1"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/warna1"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="SCORE" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    <!-- TP -->
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/tpParam"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowSpan="3"
+                        app:layout_rowWeight="3"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="6dp"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:text="Tinggi Pundak\n( TP )" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/tpkls1"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="1" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tpukuran1"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/tpKelas1Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:background="@color/zxing_transparent"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/tpKelas1Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/tpscore1"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <EditText
+                            android:id="@+id/tpscore1et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="3" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/tpkls2"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="2" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tpukuran2"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/tpKelas2Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/tpKelas2Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/tpscore2"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <EditText
+                            android:id="@+id/tpscore2et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/tpkls3"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="3" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/tpukuran3"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="2dp">
+
+                            <EditText
+                                android:id="@+id/tpKelas3Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="2dp">
+
+                            <EditText
+                                android:id="@+id/tpKelas3Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/tpscore3"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <EditText
+                            android:id="@+id/tpscore3et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    <!-- PB -->
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/pbParam"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowSpan="3"
+                        app:layout_rowWeight="3"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="6dp"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:text="Panjang Badan\n( PB )" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/pbkls1"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="1" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pbukuran1"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/pbKelas1Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/pbKelas1Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/pbscore1"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <EditText
+                            android:id="@+id/pbscore1et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="3" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/pbkls2"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="2" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pbukuran2"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/pbKelas2Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/pbKelas2Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/pbscore2"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <EditText
+                            android:id="@+id/pbscore2et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/pbkls3"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="3" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/pbukuran3"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="2dp">
+
+                            <EditText
+                                android:id="@+id/pbKelas3Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="2dp">
+
+                            <EditText
+                                android:id="@+id/pbKelas3Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/pbscore3"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <EditText
+                            android:id="@+id/pbscore3et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    <!-- LD -->
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/ldParam"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowSpan="3"
+                        app:layout_rowWeight="3"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:padding="6dp"
+                            android:textSize="12sp"
+                            android:text="Lingkar Dada\n( LD )" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/ldkls1"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="1" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ldukuran1"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/ldKelas1Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/ldKelas1Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/ldscore1"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <EditText
+                            android:id="@+id/ldscore1et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="3" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/ldkls2"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="2" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ldukuran2"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/ldKelas2Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/ldKelas2Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/ldscore2"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <EditText
+                            android:id="@+id/ldscore2et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/ldkls3"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="3" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ldukuran3"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="2dp">
+
+                            <EditText
+                                android:id="@+id/ldKelas3Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="2dp">
+
+                            <EditText
+                                android:id="@+id/ldKelas3Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/ldscore3"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <EditText
+                            android:id="@+id/ldscore3et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    <!-- LS -->
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/lsParam"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:layout_rowSpan="3"
+                        app:layout_rowWeight="3"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:textSize="12sp"
+                            android:padding="6dp"
+                            android:text="Lingkar Skrotum\n( LS )" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/lskls1"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="1" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lsukuran1"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:id="@+id/lsmin1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/lsKelas1Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:id="@+id/lsmax1"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/lsKelas1Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/lsscore1"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <EditText
+                            android:id="@+id/lsscore1et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="3" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/lskls2"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="2" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lsukuran2"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:id="@+id/lsmin2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/lsKelas2Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:id="@+id/lsmax2"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="0dp">
+
+                            <EditText
+                                android:id="@+id/lsKelas2Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/lsscore2"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="0dp">
+
+                        <EditText
+                            android:id="@+id/lsscore2et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="2" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/lskls3"
+                        app:layout_columnWeight="1"
+                        app:layout_gravity="fill"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="1dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:text="3" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lsukuran3"
+                        app:layout_columnWeight="2"
+                        app:layout_columnSpan="2"
+                        app:layout_gravity="fill"
+                        android:baselineAligned="false"
+                        android:orientation="horizontal">
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:id="@+id/lsmin3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_green"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="2dp">
+
+                            <EditText
+                                android:id="@+id/lsKelas3Min"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+
+                        <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                            android:id="@+id/lsmax3"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="match_parent"
+                            android:padding="4dp"
+                            app:fillBackground="@color/table_editable_red"
+                            app:leftBorderColor="@color/colorPrimary"
+                            app:leftBorderWidth="0dp"
+                            app:topBorderColor="@color/colorPrimary"
+                            app:topBorderWidth="1dp"
+                            app:rightBorderColor="@color/colorPrimary"
+                            app:rightBorderWidth="1dp"
+                            app:bottomBorderColor="@color/colorPrimary"
+                            app:bottomBorderWidth="2dp">
+
+                            <EditText
+                                android:id="@+id/lsKelas3Max"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:background="@color/zxing_transparent"
+                                android:textSize="14sp"
+                                android:inputType="number"
+                                android:text="0" />
+                        </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                    </LinearLayout>
+
+                    <com.zam.sidik_padang.util.bordered.view.BorderedLayout
+                        android:id="@+id/lsscore3"
+                        app:layout_columnWeight="1"
+                        app:layout_columnSpan="1"
+                        app:layout_gravity="fill"
+                        app:fillBackground="@color/table_editable_yellow"
+                        app:leftBorderColor="@color/colorPrimary"
+                        app:leftBorderWidth="0dp"
+                        app:topBorderColor="@color/colorPrimary"
+                        app:topBorderWidth="1dp"
+                        app:rightBorderColor="@color/colorPrimary"
+                        app:rightBorderWidth="0dp"
+                        app:bottomBorderColor="@color/colorPrimary"
+                        app:bottomBorderWidth="2dp">
+
+                        <EditText
+                            android:id="@+id/lsscore3et"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:gravity="center"
+                            android:background="@color/zxing_transparent"
+                            android:textSize="14sp"
+                            android:inputType="number"
+                            android:fontFamily="@font/nunito_bold"
+                            android:text="1" />
+                    </com.zam.sidik_padang.util.bordered.view.BorderedLayout>
+                </androidx.gridlayout.widget.GridLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp">
+
+                <TextView
+                    android:id="@+id/bintang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_lightitalic"
+                    android:text=" * " />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/nunito_lightitalic"
+                    android:layout_toEndOf="@id/bintang"
+                    android:text="biarkan 0 atau ≥ jika tidak digunakan atau nilai maks tidak terbatas" />
+            </RelativeLayout>
+
+            <Button
+                android:id="@+id/btnSimpan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/fab_margin"
+                android:text="Simpan"
+                android:fontFamily="@font/nunito_black"
+                android:textColor="@color/mdtp_white"
+                android:background="@drawable/selector_btn_primary" />
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

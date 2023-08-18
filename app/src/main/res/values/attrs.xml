@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="ImageViewBulat">
+        <attr name="border_ring" format="dimension" />
+        <attr name="border_warna" format="color" />
+    </declare-styleable>
+    <declare-styleable name="BottomShadowFrameLayout">
+        <attr name="bottomShadow" format="dimension" />
+        <attr name="shadowColor" format="color" />
+        <attr name="bgColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="PageIndicator">
+        <attr name="indicatorColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="PrintPreviewLayout">
+        <attr name="pageOrientation" format="enum">
+            <enum name="vertical" value="1" />
+            <enum name="horizontal" value="2" />
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="itemSize" format="dimension" />
+        <attr name="itemScale" format="float" />
+        <attr name="itemSelectedTint" format="color" />
+        <attr name="itemTint" format="color" />
+        <attr name="delimiterSize" format="dimension" />
+        <attr name="itemIcon" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="FullscreenAttrs">
+        <attr name="fullscreenBackgroundColor" format="color" />
+        <attr name="fullscreenTextColor" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BorderedLayout">
+        <attr name="leftBorderWidth" format="dimension" />
+        <attr name="leftBorderColor" format="color" />
+        <attr name="topBorderWidth" format="dimension" />
+        <attr name="topBorderColor" format="color" />
+        <attr name="rightBorderWidth" format="dimension" />
+        <attr name="rightBorderColor" format="color" />
+        <attr name="bottomBorderWidth" format="dimension" />
+        <attr name="bottomBorderColor" format="color" />
+        <attr name="fillBackground" format="color" />
+    </declare-styleable>
+</resources>
+

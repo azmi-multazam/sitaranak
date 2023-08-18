@@ -1,11 +1,11 @@
 <resources>
-    <string name="app_name" translatable="false">Sidik Padang</string>
+    <string name="app_name" translatable="false">SITARANAK</string>
     <string name="registration">Registration</string>
     <string name="user_id">User ID</string>
     <string name="password">Password</string>
     <string name="login">Login</string>
     <string name="register">Register</string>
-    <string name="member_area">SIDIK Padang</string>
+    <string name="member_area">SITARANAK</string>
     <string name="enter_user_id">Enter user ID</string>
     <string name="enter_password">Enter password</string>
     <string name="invalid_user_id">Invalid user ID</string>

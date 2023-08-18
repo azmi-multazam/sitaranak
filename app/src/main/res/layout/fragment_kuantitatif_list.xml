@@ -186,7 +186,7 @@
                                 android:background="@color/table_editable_green"
                                 android:layout_margin="4dp"
                                 android:padding="4dp"
-                                android:text="KEPALA DINAS KETAHANAN PANGAN DAN PERTANIAN KABUPATEN Padang"
+                                android:text="KEPALA DINAS KETAHANAN PANGAN DAN PERTANIAN KABUPATEN ................"
                                 android:textSize="13dp"/>
                         </LinearLayout>
 

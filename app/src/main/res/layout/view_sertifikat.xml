@@ -424,7 +424,7 @@
                         android:textSize="13dp"
                         android:layout_gravity="center_horizontal"
                         android:gravity="center_horizontal"
-                        android:text="KEPALA DINAS KETAHANAN PANGAN DAN PERTANIAN KABUPATEN Padang" />
+                        android:text="KEPALA DINAS KETAHANAN PANGAN DAN PERTANIAN KABUPATEN .................." />
 
                     <TextView
                         android:id="@+id/kadin"

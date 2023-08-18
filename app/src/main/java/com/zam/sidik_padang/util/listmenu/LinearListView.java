@@ -43,7 +43,6 @@ public class LinearListView extends LinearLayout implements View.OnClickListener
         build();
     }
 
-    @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     public LinearListView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         build();

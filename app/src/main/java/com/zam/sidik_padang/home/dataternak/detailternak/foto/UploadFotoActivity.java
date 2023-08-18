@@ -58,23 +58,21 @@ public class UploadFotoActivity extends BaseLogedinActivity {
     }
 
     private void pickImage() {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                launchPickPhotoIntent();
-            } else {
-                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                    new AlertDialog.Builder(this).setMessage(R.string.need_to_access_media_storage).setPositiveButton(android.R.string.ok,
-                            new DialogInterface.OnClickListener() {
-                                @SuppressLint("InlinedApi")
-                                @Override
-                                public void onClick(DialogInterface dialog, int which) {
-                                    ActivityCompat.requestPermissions(UploadFotoActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 12);
-                                }
-                            }).show();
-                } else
-                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 12);
-            }
-        } else launchPickPhotoIntent();
+        if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+            launchPickPhotoIntent();
+        } else {
+            if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                new AlertDialog.Builder(this).setMessage(R.string.need_to_access_media_storage).setPositiveButton(android.R.string.ok,
+                        new DialogInterface.OnClickListener() {
+                            @SuppressLint("InlinedApi")
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                ActivityCompat.requestPermissions(UploadFotoActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 12);
+                            }
+                        }).show();
+            } else
+                ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 12);
+        }
     }
 
     @Override

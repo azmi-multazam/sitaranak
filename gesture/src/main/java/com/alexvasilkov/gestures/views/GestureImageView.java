@@ -206,11 +206,7 @@ public class GestureImageView extends ImageView
 
     @SuppressWarnings("deprecation")
     private static Drawable getDrawable(Context context, @DrawableRes int id) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            return context.getDrawable(id);
-        } else {
-            return context.getResources().getDrawable(id);
-        }
+        return context.getDrawable(id);
     }
 
 }

@@ -46,11 +46,9 @@ public class ScaleGestureDetectorFixed extends ScaleGestureDetector {
         return result;
     }
 
-    @TargetApi(Build.VERSION_CODES.KITKAT)
     private boolean isInDoubleTapMode() {
         // Indirectly determine double tap mode
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT
-                && isQuickScaleEnabled() && getCurrentSpan() == getCurrentSpanY();
+        return isQuickScaleEnabled() && getCurrentSpan() == getCurrentSpanY();
     }
 
     @Override

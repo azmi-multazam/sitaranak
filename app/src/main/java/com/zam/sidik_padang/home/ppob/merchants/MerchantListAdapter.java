@@ -43,9 +43,7 @@ public class MerchantListAdapter extends RecyclerView.Adapter<MerchantViewHolder
     public void onBindViewHolder(final MerchantViewHolder holder, int position) {
         Merchant m = list.get(position);
         Spanned spanned;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            spanned = Html.fromHtml(m.keterangan, Html.FROM_HTML_OPTION_USE_CSS_COLORS);
-        } else spanned = Html.fromHtml(m.keterangan);
+        spanned = Html.fromHtml(m.keterangan, Html.FROM_HTML_OPTION_USE_CSS_COLORS);
         holder.textViewKeterangan.setText(spanned);
         holder.textViewToko.setText(m.toko);
         ViewPropertyAnimation.Animator anim = new ViewPropertyAnimation.Animator() {

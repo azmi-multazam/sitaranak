@@ -47,7 +47,6 @@ public class PrintPreviewLayout extends RelativeLayout {
         init(attrs);
     }
 
-    @TargetApi(Build.VERSION_CODES.LOLLIPOP)
     public PrintPreviewLayout(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
         init(attrs);

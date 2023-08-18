@@ -337,11 +337,7 @@ public class CropAreaView extends View {
         paint.setColor(backColor);
 
         // Punching hole in background color requires offscreen drawing
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            canvas.saveLayer(0, 0, canvas.getWidth(), canvas.getHeight(), null);
-        } else {
-            canvas.saveLayer(0, 0, canvas.getWidth(), canvas.getHeight(), null, 0);
-        }
+        canvas.saveLayer(0, 0, canvas.getWidth(), canvas.getHeight(), null);
 
         canvas.drawPaint(paint);
 

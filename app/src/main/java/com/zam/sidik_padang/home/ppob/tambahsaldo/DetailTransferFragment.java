@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
@@ -60,13 +61,10 @@ public class DetailTransferFragment extends Fragment {
     }
 
     @Override
-    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
+    public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         Spanned spannedText;
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            spannedText = Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY);
-        } else //noinspection deprecation
-            spannedText = Html.fromHtml(text);
+        spannedText = Html.fromHtml(text, Html.FROM_HTML_MODE_LEGACY);
         ((TextView) view.findViewById(R.id.fragment_detail_transfer_TextView)).setText(spannedText);
     }
 }

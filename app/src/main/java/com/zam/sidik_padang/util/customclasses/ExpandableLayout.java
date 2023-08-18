@@ -5,6 +5,7 @@ import android.animation.Animator.AnimatorListener;
 import android.animation.ObjectAnimator;
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
+import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.content.Context;
 import android.graphics.Canvas;
@@ -17,6 +18,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+
+import androidx.annotation.NonNull;
 
 public class ExpandableLayout extends LinearLayout implements View.OnClickListener {
     private int mWidthMeasureSpec;
@@ -46,7 +49,6 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
         this.init(context);
     }
 
-    @TargetApi(21)
     public ExpandableLayout(Context context, AttributeSet attrs,
                             int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
@@ -58,6 +60,7 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
         this.setOrientation(LinearLayout.VERTICAL);
     }
 
+    @SuppressLint("DiscouragedApi")
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
         mWidthMeasureSpec = widthMeasureSpec;
@@ -162,9 +165,7 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
         View child = findChild();
         if (child != null) {
             LayoutParams p = (LayoutParams) child.getLayoutParams();
-            if (p.isExpanded) {
-                return true;
-            }
+            return p.isExpanded;
         }
         return false;
     }
@@ -222,7 +223,7 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
                     "expand(), View is not expandableView");
         }
         LayoutParams p = (LayoutParams) child.getLayoutParams();
-        if (mFirstLayout || mAttachedToWindow == false || !shouldAnimate) {
+        if (mFirstLayout || !mAttachedToWindow || !shouldAnimate) {
             p.isExpanded = true;
             p.isExpanding = false;
             p.height = p.originalHeight;
@@ -253,7 +254,7 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
                 android.R.integer.config_shortAnimTime));
         mExpandAnimator.addUpdateListener(new AnimatorUpdateListener() {
             @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
+            public void onAnimationUpdate(@NonNull ValueAnimator animation) {
                 dispatchOffset(child);
                 child.requestLayout();
             }
@@ -261,22 +262,22 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
         mExpandAnimator.addListener(new AnimatorListener() {
 
             @Override
-            public void onAnimationStart(Animator animation) {
+            public void onAnimationStart(@NonNull Animator animation) {
 
             }
 
             @Override
-            public void onAnimationRepeat(Animator animation) {
+            public void onAnimationRepeat(@NonNull Animator animation) {
 
             }
 
             @Override
-            public void onAnimationEnd(Animator animation) {
+            public void onAnimationEnd(@NonNull Animator animation) {
                 performToggleState(child);
             }
 
             @Override
-            public void onAnimationCancel(Animator animation) {
+            public void onAnimationCancel(@NonNull Animator animation) {
 
             }
         });
@@ -296,7 +297,7 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
                     "collapse(), View is not expandableView");
         }
         LayoutParams p = (LayoutParams) child.getLayoutParams();
-        if (mFirstLayout || mAttachedToWindow == false || !shouldAnimation) {
+        if (mFirstLayout || !mAttachedToWindow || !shouldAnimation) {
             p.isExpanded = false;
             p.isExpanding = false;
             p.height = p.originalHeight;
@@ -326,7 +327,7 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
                 android.R.integer.config_shortAnimTime));
         mExpandAnimator.addUpdateListener(new AnimatorUpdateListener() {
             @Override
-            public void onAnimationUpdate(ValueAnimator animation) {
+            public void onAnimationUpdate(@NonNull ValueAnimator animation) {
                 dispatchOffset(child);
                 child.requestLayout();
             }
@@ -523,7 +524,6 @@ public class ExpandableLayout extends LinearLayout implements View.OnClickListen
             originalHeight = this.height;
         }
 
-        @TargetApi(Build.VERSION_CODES.KITKAT)
         public LayoutParams(LinearLayout.LayoutParams source) {
             super(source);
             originalHeight = this.height;

@@ -85,14 +85,7 @@ public class DefaultViewInjector implements IViewInjector<DefaultViewInjector> {
     @Override
     public DefaultViewInjector alpha(int id, float alpha) {
         View view = findViewById(id);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.HONEYCOMB) {
-            view.setAlpha(alpha);
-        } else {
-            AlphaAnimation animation = new AlphaAnimation(alpha, alpha);
-            animation.setDuration(0);
-            animation.setFillAfter(true);
-            view.startAnimation(animation);
-        }
+        view.setAlpha(alpha);
         return this;
     }
 
@@ -117,15 +110,10 @@ public class DefaultViewInjector implements IViewInjector<DefaultViewInjector> {
         return this;
     }
 
-    @SuppressWarnings("deprecation")
     @Override
     public DefaultViewInjector background(int id, Drawable drawable) {
         View view = findViewById(id);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
-            view.setBackground(drawable);
-        } else {
-            view.setBackgroundDrawable(drawable);
-        }
+        view.setBackground(drawable);
         return this;
     }
 
@@ -203,7 +191,6 @@ public class DefaultViewInjector implements IViewInjector<DefaultViewInjector> {
         return this;
     }
 
-    @RequiresApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     public DefaultViewInjector activated(int id, boolean activated) {
         findViewById(id).setSelected(activated);

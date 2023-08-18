@@ -93,19 +93,11 @@ class ViewPositionHolder implements ViewTreeObserver.OnPreDrawListener {
     }
 
     private static boolean isLaidOut(View view) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            return view.isLaidOut();
-        } else {
-            return view.getWidth() > 0 && view.getHeight() > 0;
-        }
+        return view.isLaidOut();
     }
 
     private static boolean isAttached(View view) {
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
-            return view.isAttachedToWindow();
-        } else {
-            return view.getWindowToken() != null;
-        }
+        return view.isAttachedToWindow();
     }
 
     interface OnViewPositionChangeListener {

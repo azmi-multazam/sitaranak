@@ -68,7 +68,6 @@ public interface IViewInjector<VI extends IViewInjector> {
 
     VI selected(int id, boolean selected);
 
-    @RequiresApi(Build.VERSION_CODES.HONEYCOMB)
     VI activated(int id, boolean activated);
 
     VI pressed(int id, boolean pressed);

@@ -48,9 +48,7 @@ public class BeritaAdapter extends RecyclerView.Adapter<BeritaViewHolder> {
         holder.textTanggal.setText(berita.tanggal);
         holder.textTitle.setText(berita.title);
         holder.layoutHeader.setBackgroundColor(berita.collapsed ? Color.WHITE : colorAccent);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-            holder.textIsi.setText(Html.fromHtml(berita.isi, 0));
-        } else holder.textIsi.setText(Html.fromHtml(berita.isi));
+        holder.textIsi.setText(Html.fromHtml(berita.isi, 0));
         holder.textIsi.setVisibility(berita.collapsed ? View.GONE : View.VISIBLE);
         holder.view.setOnClickListener(new View.OnClickListener() {
 

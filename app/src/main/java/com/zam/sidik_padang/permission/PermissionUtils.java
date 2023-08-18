@@ -68,15 +68,8 @@ class PermissionUtils {
         this.dialog_content = dialog_content;
         this.req_code = request_code;
 
-        if (Build.VERSION.SDK_INT >= 23) {
-            if (checkAndRequestPermissions(permissions, request_code)) {
-                permissionResultCallback.PermissionGranted(request_code);
-                Log.i("all permissions", "granted");
-                Log.i("proceed", "to callback");
-            }
-        } else {
+        if (checkAndRequestPermissions(permissions, request_code)) {
             permissionResultCallback.PermissionGranted(request_code);
-
             Log.i("all permissions", "granted");
             Log.i("proceed", "to callback");
         }

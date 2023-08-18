@@ -32,17 +32,13 @@ public class DepthPageTransformer implements ViewPager.PageTransformer, ViewPage
             float scaleFactor = 1f - (1f - MIN_SCALE) * position;
             view.setScaleX(scaleFactor);
             view.setScaleY(scaleFactor);
-            if (Build.VERSION.SDK_INT >= 21) {
-                view.setTranslationZ(scaleFactor - 1f);
-            }
+            view.setTranslationZ(scaleFactor - 1f);
         } else {
             view.setAlpha(1f);
             view.setTranslationX(0f);
             view.setScaleX(1f);
             view.setScaleY(1f);
-            if (Build.VERSION.SDK_INT >= 21) {
-                view.setTranslationZ(0f);
-            }
+            view.setTranslationZ(0f);
         }
     }
 

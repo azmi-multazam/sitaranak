@@ -170,7 +170,6 @@ public abstract class CustomViewInjector<CVI extends IViewInjector> implements I
         return null;
     }
 
-    @RequiresApi(Build.VERSION_CODES.HONEYCOMB)
     @Override
     public CVI activated(int id, boolean activated) {
         return null;

@@ -875,22 +875,20 @@ public class TambahPeternakActivity extends BaseLogedinActivity
         } else if (id == R.id.activity_tambah_peternak_ButtonSimpan) {
             validateAndGo();
         } else if (id == R.id.imgAddFoto) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-                    launchPickPhotoIntent();
-                } else {
-                    if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
-                        new AlertDialog.Builder(this).setMessage(R.string.need_to_access_media_storage).setPositiveButton(android.R.string.ok,
-                                new DialogInterface.OnClickListener() {
-                                    @Override
-                                    public void onClick(DialogInterface dialog, int which) {
-                                        ActivityCompat.requestPermissions(TambahPeternakActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 12);
-                                    }
-                                }).show();
-                    } else
-                        ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 12);
-                }
-            } else launchPickPhotoIntent();
+            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
+                launchPickPhotoIntent();
+            } else {
+                if (ActivityCompat.shouldShowRequestPermissionRationale(this, Manifest.permission.READ_EXTERNAL_STORAGE)) {
+                    new AlertDialog.Builder(this).setMessage(R.string.need_to_access_media_storage).setPositiveButton(android.R.string.ok,
+                            new DialogInterface.OnClickListener() {
+                                @Override
+                                public void onClick(DialogInterface dialog, int which) {
+                                    ActivityCompat.requestPermissions(TambahPeternakActivity.this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 12);
+                                }
+                            }).show();
+                } else
+                    ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 12);
+            }
         }
     }
 
@@ -995,10 +993,7 @@ public class TambahPeternakActivity extends BaseLogedinActivity
                     fotoLink = je.get("link").getAsString();
                 }
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                    textViewFoto.setCompoundDrawablesRelative(drawable, null, null, null);
-                } else
-                    textViewFoto.setCompoundDrawables(drawable, null, null, null);
+                textViewFoto.setCompoundDrawablesRelative(drawable, null, null, null);
                 textViewFoto.setText(text);
                 progressBarFoto.setVisibility(View.INVISIBLE);
             }

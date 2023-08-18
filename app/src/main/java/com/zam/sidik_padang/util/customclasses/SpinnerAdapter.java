@@ -52,9 +52,7 @@ public class SpinnerAdapter extends BaseAdapter implements android.widget.Spinne
             padding = (int) (viewGroup.getContext().getResources().getDisplayMetrics().density * 10);
         view.setPadding(padding, padding, padding, padding);
         ((TextView) view).setGravity(Gravity.CENTER);
-        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-            ((TextView) view).setCompoundDrawablesRelative(null, null, icDropDownDrawable, null);
-        } else ((TextView) view).setCompoundDrawables(null, null, icDropDownDrawable, null);
+        ((TextView) view).setCompoundDrawablesRelative(null, null, icDropDownDrawable, null);
         ((TextView) view).setText(list.get(i).toString());
         return view;
     }

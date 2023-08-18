@@ -758,10 +758,8 @@ public class ViewPositionAnimator {
         DisplayMetrics metrics = new DisplayMetrics();
         if (Build.VERSION.SDK_INT >= 30) {
             context.getDisplay().getRealMetrics(metrics);
-        } else if (Build.VERSION.SDK_INT >= 17) {
-            wm.getDefaultDisplay().getRealMetrics(metrics);
         } else {
-            wm.getDefaultDisplay().getMetrics(metrics);
+            wm.getDefaultDisplay().getRealMetrics(metrics);
         }
         rect.set(0, 0, metrics.widthPixels, metrics.heightPixels);
     }

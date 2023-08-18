@@ -272,21 +272,6 @@ public class CropOverlayView extends View {
     public void setCropShape(CropImageView.CropShape cropShape) {
         if (mCropShape != cropShape) {
             mCropShape = cropShape;
-            if (Build.VERSION.SDK_INT <= 17) {
-                if (mCropShape == CropImageView.CropShape.OVAL) {
-                    mOriginalLayerType = getLayerType();
-                    if (mOriginalLayerType != View.LAYER_TYPE_SOFTWARE) {
-                        // TURN off hardware acceleration
-                        setLayerType(View.LAYER_TYPE_SOFTWARE, null);
-                    } else {
-                        mOriginalLayerType = null;
-                    }
-                } else if (mOriginalLayerType != null) {
-                    // return hardware acceleration back
-                    setLayerType(mOriginalLayerType, null);
-                    mOriginalLayerType = null;
-                }
-            }
             invalidate();
         }
     }
@@ -692,7 +677,7 @@ public class CropOverlayView extends View {
         float bottom = Math.min(BitmapUtils.getRectBottom(mBoundsPoints), getHeight());
 
         if (mCropShape == CropImageView.CropShape.RECTANGLE) {
-            if (!isNonStraightAngleRotated() || Build.VERSION.SDK_INT <= 17) {
+            if (!isNonStraightAngleRotated()) {
                 canvas.drawRect(left, top, right, rect.top, mBackgroundPaint);
                 canvas.drawRect(left, rect.bottom, right, bottom, mBackgroundPaint);
                 canvas.drawRect(left, rect.top, rect.left, rect.bottom, mBackgroundPaint);
@@ -717,11 +702,7 @@ public class CropOverlayView extends View {
             }
         } else {
             mPath.reset();
-            if (Build.VERSION.SDK_INT <= 17 && mCropShape == CropImageView.CropShape.OVAL) {
-                mDrawRect.set(rect.left + 2, rect.top + 2, rect.right - 2, rect.bottom - 2);
-            } else {
-                mDrawRect.set(rect.left, rect.top, rect.right, rect.bottom);
-            }
+            mDrawRect.set(rect.left, rect.top, rect.right, rect.bottom);
             mPath.addOval(mDrawRect, Path.Direction.CW);
             canvas.save();
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
@@ -1113,7 +1094,6 @@ public class CropOverlayView extends View {
     private class ScaleListener extends ScaleGestureDetector.SimpleOnScaleGestureListener {
 
         @Override
-        @TargetApi(Build.VERSION_CODES.HONEYCOMB)
         public boolean onScale(ScaleGestureDetector detector) {
             RectF rect = mCropWindowHandler.getRect();
 

@@ -771,10 +771,7 @@ public class ProfileLengkapActivity extends BaseActivity
                     fotoLink = je.get("link").getAsString();
                 }
 
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
-                    textViewFoto.setCompoundDrawablesRelative(drawable, null, null, null);
-                } else
-                    textViewFoto.setCompoundDrawables(drawable, null, null, null);
+                textViewFoto.setCompoundDrawablesRelative(drawable, null, null, null);
                 textViewFoto.setText(text);
                 progressBarFoto.setVisibility(View.INVISIBLE);
             }

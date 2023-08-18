@@ -43,7 +43,7 @@ public class AlbumListAdapter extends RecyclerView.Adapter<VideoViewHolder> {
         final Album album = list.get(p2);
         h.textViewJudul.setText(album.jumlah_foto + " foto");
         if (album.keterangan.contains("<")) {
-            Spanned keterangan = Build.VERSION.SDK_INT >= Build.VERSION_CODES.N ? Html.fromHtml(album.keterangan, 0) : Html.fromHtml(album.keterangan);
+            Spanned keterangan = Html.fromHtml(album.keterangan, 0);
             h.textViewTanggal.setText(keterangan);
         } else {
             h.textViewTanggal.setText(album.keterangan);

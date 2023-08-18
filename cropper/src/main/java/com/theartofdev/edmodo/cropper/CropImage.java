@@ -319,10 +319,7 @@ public final class CropImage {
      * question</a>.
      */
     public static boolean isExplicitCameraPermissionRequired(@NonNull Context context) {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-                && hasPermissionInManifest(context, "android.permission.CAMERA")
-                && context.checkSelfPermission(Manifest.permission.CAMERA)
-                != PackageManager.PERMISSION_GRANTED;
+        return hasPermissionInManifest(context, "android.permission.CAMERA") && context.checkSelfPermission(Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED;
     }
 
     /**
@@ -396,10 +393,7 @@ public final class CropImage {
      */
     public static boolean isReadExternalStoragePermissionsRequired(
             @NonNull Context context, @NonNull Uri uri) {
-        return Build.VERSION.SDK_INT >= Build.VERSION_CODES.M
-                && context.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE)
-                != PackageManager.PERMISSION_GRANTED
-                && isUriRequiresPermissions(context, uri);
+        return context.checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) != PackageManager.PERMISSION_GRANTED && isUriRequiresPermissions(context, uri);
     }
 
     /**
@@ -539,7 +533,6 @@ public final class CropImage {
          *
          * @param fragment fragment to receive result
          */
-        @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
         public void start(@NonNull Context context, @NonNull android.app.Fragment fragment) {
             fragment.startActivityForResult(getIntent(context), CROP_IMAGE_ACTIVITY_REQUEST_CODE);
         }
@@ -559,7 +552,6 @@ public final class CropImage {
          *
          * @param fragment fragment to receive result
          */
-        @RequiresApi(api = Build.VERSION_CODES.HONEYCOMB)
         public void start(
                 @NonNull Context context, @NonNull android.app.Fragment fragment, @Nullable Class<?> cls) {
             fragment.startActivityForResult(getIntent(context, cls), CROP_IMAGE_ACTIVITY_REQUEST_CODE);

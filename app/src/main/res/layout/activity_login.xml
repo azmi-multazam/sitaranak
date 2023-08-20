@@ -21,7 +21,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:paddingBottom="10dp"
+            android:paddingBottom="60dp"
             android:paddingEnd="40dp"
             android:paddingLeft="40dp"
             android:paddingRight="40dp"
@@ -158,7 +158,6 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
-                    android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:background="@drawable/selector_stroke_primary"
                     android:clickable="true"
@@ -170,24 +169,27 @@
                     android:paddingStart="10dp"
                     android:paddingTop="5dp"
                     android:text="@string/register"
-                    android:textColor="@color/selector_text_primary" />
+                    android:textColor="@color/selector_text_primary"
+                    android:focusable="true" />
 
                 <TextView
                     android:id="@+id/activity_login_TextViewForgotPassword"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
                     android:layout_centerVertical="true"
                     android:clickable="true"
                     android:paddingBottom="5dp"
-                    android:paddingRight="20dp"
+                    android:paddingEnd="20dp"
                     android:paddingTop="5dp"
                     android:text="@string/forgot_password_"
-                    android:textColor="@color/selector_text_accent" />
+                    android:textColor="@color/selector_text_accent"
+                    android:focusable="true"
+                    tools:ignore="RtlSymmetry" />
 
             </RelativeLayout>
 
+            <!--
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -221,6 +223,7 @@
                     android:adjustViewBounds="true"
                     android:src="@drawable/logo_pamekasan" />
             </LinearLayout>
+            -->
         </LinearLayout>
 
     </ScrollView>

@@ -46,13 +46,11 @@
                     android:id="@+id/imageBarcode"
                     android:layout_width="match_parent"
                     android:layout_height="50dp"
-                    android:layout_alignLeft="@id/layoutketerangan"
+                    android:layout_alignStart="@id/layoutketerangan"
                     android:layout_alignParentBottom="true"
                     android:layout_marginBottom="5dp"
-                    android:paddingBottom="5dp"
-
-                    />
-
+                    android:paddingBottom="5dp" />
+                <!--
                 <ImageView
                     android:id="@+id/sidik"
                     android:layout_width="wrap_content"
@@ -66,18 +64,16 @@
                     android:maxHeight="50dp"
                     android:padding="7dp"
                     android:src="@drawable/sidik_bulat_hijau" />
+                    -->
 
                 <ImageView
                     android:id="@+id/imageViewFoto"
                     android:layout_width="140dp"
                     android:layout_height="match_parent"
-                    android:layout_above="@id/sidik"
                     android:layout_below="@id/textViewTitle"
                     android:layout_margin="5dp"
                     android:layout_marginBottom="100dp"
                     android:paddingEnd="5dp"
-                    android:paddingLeft="10dp"
-                    android:paddingRight="5dp"
                     android:paddingStart="10dp"
                     android:scaleType="fitXY" />
 
@@ -89,7 +85,6 @@
                     android:layout_above="@id/imageBarcode"
                     android:layout_below="@id/textViewTitle"
                     android:layout_toEndOf="@id/imageViewFoto"
-                    android:layout_toRightOf="@id/imageViewFoto"
                     android:orientation="vertical"
                     android:paddingTop="5dp">
 

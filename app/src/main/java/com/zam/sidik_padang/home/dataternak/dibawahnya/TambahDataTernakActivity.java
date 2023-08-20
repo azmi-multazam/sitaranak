@@ -879,7 +879,7 @@ public class TambahDataTernakActivity
         if (asalTernak.isEmpty()) {
             editTextAsalTernak.setError(getString(R.string.this_field_is_mandatory));
             editTextAsalTernak.requestFocus();
-            recreate();
+            //recreate();
             return;
         }
         uriBuilder.appendQueryParameter("asal_ternak", Util.toUrlEncoded(asalTernak));
@@ -986,23 +986,24 @@ public class TambahDataTernakActivity
 
     private void onSuccessBangsa(BangsaResponse data) {
         progressbarSpinnerBangsaTernak.setVisibility(View.INVISIBLE);
-
-        if (selectedNamaTernak == 1) {
-            for (BangsaSapi bangsaSapi : data.getBangsaSapi()) {
-                Map<String, String> map = new HashMap<>();
-                map.put("id", bangsaSapi.getIdBangsa());
-                map.put("nama", bangsaSapi.getKeterangan());
-                listBangsaTernak.add(map);
+        if (data.getBangsaKambing() != null) {
+            if (selectedNamaTernak == 1) {
+                for (BangsaSapi bangsaSapi : data.getBangsaSapi()) {
+                    Map<String, String> map = new HashMap<>();
+                    map.put("id", bangsaSapi.getIdBangsa());
+                    map.put("nama", bangsaSapi.getKeterangan());
+                    listBangsaTernak.add(map);
+                }
+            } else {
+                for (BangsaKambing bangsaSapi : data.getBangsaKambing()) {
+                    Map<String, String> map = new HashMap<>();
+                    map.put("id", bangsaSapi.getIdBangsa());
+                    map.put("nama", bangsaSapi.getKeterangan());
+                    listBangsaTernak.add(map);
+                }
             }
-        } else {
-            for (BangsaKambing bangsaSapi : data.getBangsaKambing()) {
-                Map<String, String> map = new HashMap<>();
-                map.put("id", bangsaSapi.getIdBangsa());
-                map.put("nama", bangsaSapi.getKeterangan());
-                listBangsaTernak.add(map);
-            }
+            adapterSpinnerBangsaTernak.notifyDataSetChanged();
         }
-        adapterSpinnerBangsaTernak.notifyDataSetChanged();
     }
 
     private void onErrorBangsa(String message) {

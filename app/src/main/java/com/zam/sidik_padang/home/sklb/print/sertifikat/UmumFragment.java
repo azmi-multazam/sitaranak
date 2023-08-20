@@ -94,11 +94,7 @@ public class UmumFragment extends BaseFragment implements SertifikatAdapter.OnDa
 
     private void success(String total) {
         progress.setVisibility(View.INVISIBLE);
-        if (petugasList.size() == 0) {
-            rv.setVisibility(View.INVISIBLE);
-            layoutMsg.setVisibility(View.VISIBLE);
-            tvError.setText("Data kosong");
-        } else {
+        if (petugasList != null && petugasList.size() > 0) {
             for (int i = 0; i < petugasList.size(); i++) {
                 String base = Paper.book().read("sertifikat_" + petugasList.get(i).getId());
                 petugasList.get(i).setAdaSertifikat(base!=null);
@@ -109,6 +105,10 @@ public class UmumFragment extends BaseFragment implements SertifikatAdapter.OnDa
 
             tvTotal.setText(String.format("Total %s", total));
             tvTotal.setVisibility(View.VISIBLE);
+        } else {
+            rv.setVisibility(View.INVISIBLE);
+            layoutMsg.setVisibility(View.VISIBLE);
+            tvError.setText("Data kosong");
         }
     }
 

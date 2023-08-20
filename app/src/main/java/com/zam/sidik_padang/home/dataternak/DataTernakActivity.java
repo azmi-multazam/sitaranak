@@ -64,6 +64,7 @@ import com.zam.sidik_padang.home.dataternak.scanner.ScanDialogFragment;
 import com.zam.sidik_padang.home.selectregion.Region;
 import com.zam.sidik_padang.sapiku.SapikuFragment;
 import com.zam.sidik_padang.util.Util;
+
 import io.paperdb.Paper;
 
 /**
@@ -131,9 +132,9 @@ public class DataTernakActivity extends BaseDataTernakActivity
                     @Override
                     public void onLoadMore(final LoadMoreAdapter.Enabled enabled) {
                         int itemCount = adapter.getItemCount();
-                        Log.d("scroll", "list:"+listSize+", adapter:"+itemCount);
+                        Log.d("scroll", "list:" + listSize + ", adapter:" + itemCount);
                         if (listSize > 0) {
-                            currentPage +=1;
+                            currentPage += 1;
                             rv.postDelayed(() -> viewModel.getListPage(currentPage), 500);
                             if (itemCount >= listSize) {
                                 enabled.setLoadMoreEnabled(false);
@@ -214,7 +215,7 @@ public class DataTernakActivity extends BaseDataTernakActivity
 
     private void observe() {
         viewModel.getResponseDataTernak().observe(this, dataTernak -> {
-            if (dataTernak!=null) {
+            if (dataTernak != null) {
                 if (dataTernak.state == State.LOADING) {
                     onSearchStart();
                 } else if (dataTernak.state == State.SUCCESS) {
@@ -230,7 +231,7 @@ public class DataTernakActivity extends BaseDataTernakActivity
         });
 
         viewModel.getResponseHitungTernak().observe(this, dataTernak -> {
-            if (dataTernak!=null) {
+            if (dataTernak != null) {
                 if (dataTernak.state == State.LOADING) {
                     onHitungTernakStart();
                 } else if (dataTernak.state == State.SUCCESS) {
@@ -258,8 +259,8 @@ public class DataTernakActivity extends BaseDataTernakActivity
         });
 
         viewModel.getListDataTernak().observe(this, listTernak -> {
-            if (listTernak !=null) {
-                Log.d("observe", listTernak.size()+"");
+            if (listTernak != null) {
+                Log.d("observe", listTernak.size() + "");
                 adapter.addToList(listTernak);
             }
         });
@@ -322,9 +323,10 @@ public class DataTernakActivity extends BaseDataTernakActivity
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        } else
+        } else {
             DataTernakRepo.getInstance().clearList();
             super.onBackPressed();
+        }
     }
 
     private void bindJumlahTernak() {
@@ -624,5 +626,6 @@ public class DataTernakActivity extends BaseDataTernakActivity
 
     @IntDef({MODE_LINEARLAYOUT, MODE_GRIDLAYOUT, MODE_STAGGEREDGRIDLAYOUT})
     @Retention(RetentionPolicy.SOURCE)
-    public @interface ManagerMode{}
+    public @interface ManagerMode {
+    }
 }

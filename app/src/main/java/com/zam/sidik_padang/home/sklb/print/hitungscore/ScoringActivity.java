@@ -76,7 +76,7 @@ public class ScoringActivity extends AppCompatActivity {//implements TextWatcher
             RadioButton checkedRadioButton = (RadioButton)group.findViewById(checkedId);
             boolean isChecked = checkedRadioButton.isChecked();
             if (isChecked) {
-                isJantan = checkedRadioButton.getText().toString().toLowerCase().equals("jantan") ? 1 : 2;
+                isJantan = checkedRadioButton.getText().toString().equalsIgnoreCase("jantan") ? 1 : 2;
                 binding.jkInfo.setText("");
                 //presenter.setJenisKelaminDanUmur(isJantan, isHari, etUmur.getText().toString());
                 /*

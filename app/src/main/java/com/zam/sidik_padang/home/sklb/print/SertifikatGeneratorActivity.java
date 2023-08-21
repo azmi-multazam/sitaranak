@@ -295,7 +295,7 @@ public class SertifikatGeneratorActivity extends BaseLogedinActivity implements 
 
             Bitmap bitmap = generateQr(BASE_SERTIFIKAT+"?id="+sertifikat.getId());
             if (bitmap!=null) {
-                Bitmap overlay = BitmapFactory.decodeResource(getResources(), R.drawable.logo_pamekasan_80);
+                Bitmap overlay = BitmapFactory.decodeResource(getResources(), R.drawable.logo_72);
                 Bitmap bmpMerged = mergeBitmaps(overlay, bitmap);
                 ((ImageView) view.findViewById(R.id.barcode)).setImageBitmap(bmpMerged);
             }

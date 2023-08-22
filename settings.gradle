@@ -16,10 +16,3 @@ dependencyResolutionManagement {
 
 rootProject.name = "sidik_padang"
 include ':app'
-include ':cropper'
-include ':gesture'
-include ':cutout'
-include ':checkerboarddrawable'
-include ':loadmorewrapper'
-include ':slimadapter'
-include ':scrollview'

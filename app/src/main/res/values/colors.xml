@@ -1,27 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!--
-	<color name="colorPrimary">#1f507b</color>
-	<color name="colorPrimaryDark">#FF173B5B</color>
-	<color name="colorItemHeader">#FF83ABCF</color>
-	<color name="colorButtonLogin">#FF416E96</color>
-	<color name="colorButtonLoginPressed">#FF37474F</color>
-	<color name="colorAccent">#ff9800</color>
-	<color name="colorGrey">#757575</color>
-	<color name="windowBackground">#FFC5CAE9</color>
-	<color name="colorShadow">#9e9e9e</color>
-	<color name="colorGreySoft">#dadada</color>
-	<color name="cream">#ffecb3</color>
-	<color name="red">#d50000</color>
-
-	<color name="colorPrimary">#009900</color>
-	<color name="colorPrimaryDark">#FF2E7D32</color>
-	<color name="colorAccent">#ff9800</color>
-	<color name="colorGreenAcent100">#FFB9F6CA</color>
-	<color name="colorItemHeader">#92ef92</color>
-	<color name="colorButtonLogin">#FF416E96</color>
-	<color name="colorButtonLoginPressed">#FF37474F</color>
-	-->
     <color name="colorPrimary">@color/warna2</color>
     <color name="colorPrimaryDark">@color/warna2</color>
     <color name="colorAccent">@color/warna7</color>

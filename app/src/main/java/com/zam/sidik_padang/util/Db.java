@@ -1,5 +1,6 @@
 package com.zam.sidik_padang.util;
 
+import android.annotation.SuppressLint;
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -66,6 +67,7 @@ public class Db extends SQLiteOpenHelper {
         db.close();
     }
 
+    @SuppressLint("Range")
     public synchronized List<Map<String, String>> getAllProvinsi() {
         List<Map<String, String>> hasil = new ArrayList<>();
         SQLiteDatabase db = getReadableDatabase();

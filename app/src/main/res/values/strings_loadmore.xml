@@ -1,0 +1,4 @@
+<resources>
+    <string name="no_more" translatable="false">No more~</string>
+    <string name="retry" translatable="false">click to retry</string>
+</resources>

@@ -1,4 +1,4 @@
-package com.github.gabrielbb.cutout;
+package com.zam.sidik_padang.cutout;
 
 import android.app.Activity;
 import android.content.Intent;

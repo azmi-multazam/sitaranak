@@ -41,6 +41,8 @@ import androidx.annotation.Nullable;
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 
+import com.zam.sidik_padang.R;
+
 import java.io.File;
 import java.io.InputStream;
 import java.util.ArrayList;

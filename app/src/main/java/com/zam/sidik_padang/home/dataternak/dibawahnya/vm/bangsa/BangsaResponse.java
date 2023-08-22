@@ -1,15 +1,16 @@
 package com.zam.sidik_padang.home.dataternak.dibawahnya.vm.bangsa;
 
+import java.util.ArrayList;
 import java.util.List;
 import com.google.gson.annotations.SerializedName;
 
 public class BangsaResponse{
 
 	@SerializedName("bangsa_sapi")
-	private List<BangsaSapi> bangsaSapi;
+	private List<BangsaSapi> bangsaSapi = new ArrayList<>();
 
 	@SerializedName("bangsa_kambing")
-	private List<BangsaKambing> bangsaKambing;
+	private List<BangsaKambing> bangsaKambing = new ArrayList<>();
 
 	@SerializedName("success")
 	private boolean success;

@@ -75,8 +75,7 @@
                     android:background="@drawable/selector_stroke_white_bg"
                     android:gravity="center_vertical"
                     android:orientation="horizontal"
-                    android:paddingEnd="3dp"
-                    android:paddingRight="3dp">
+                    android:paddingEnd="3dp">
 
                     <ImageView
                         android:id="@+id/left"
@@ -84,7 +83,6 @@
                         android:layout_height="20dp"
                         android:layout_marginStart="16dp"
                         android:layout_marginEnd="4dp"
-                        android:layout_marginRight="4dp"
                         android:layout_centerVertical="true"
                         android:src="@drawable/ic_sapi_kepala" />
 
@@ -94,7 +92,6 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:background="@android:color/transparent"
-                        android:drawableLeft="@drawable/ic_camera"
                         android:drawableStart="@drawable/ic_camera" />
 
                     <com.google.android.material.textfield.TextInputEditText
@@ -119,7 +116,6 @@
                         android:id="@+id/activity_base_search_data_ButtonSearch"
                         android:layout_width="50dp"
                         android:layout_height="match_parent"
-                        android:layout_marginLeft="3dp"
                         android:layout_marginStart="3dp"
                         android:background="@drawable/selector_stroke_white_bg"
                         android:padding="10dp"

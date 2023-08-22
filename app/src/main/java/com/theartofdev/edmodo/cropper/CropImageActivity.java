@@ -32,6 +32,8 @@ import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
+import com.zam.sidik_padang.R;
+
 import java.io.File;
 import java.io.IOException;
 

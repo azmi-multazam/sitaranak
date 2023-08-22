@@ -1,4 +1,4 @@
-package com.github.gabrielbb.cutout;
+package com.zam.sidik_padang.cutout;
 
 import android.annotation.SuppressLint;
 import android.content.Context;
@@ -19,11 +19,11 @@ import android.widget.Button;
 import java.lang.ref.WeakReference;
 import java.util.Stack;
 
-import static com.github.gabrielbb.cutout.DrawView.DrawViewAction.AUTO_CLEAR;
-import static com.github.gabrielbb.cutout.DrawView.DrawViewAction.MANUAL_CLEAR;
-import static com.github.gabrielbb.cutout.DrawView.DrawViewAction.ZOOM;
+import static com.zam.sidik_padang.cutout.DrawView.DrawViewAction.AUTO_CLEAR;
+import static com.zam.sidik_padang.cutout.DrawView.DrawViewAction.MANUAL_CLEAR;
+import static com.zam.sidik_padang.cutout.DrawView.DrawViewAction.ZOOM;
 
-class DrawView extends View {
+public class DrawView extends View {
 
     private Path livePath;
     private Paint pathPaint;

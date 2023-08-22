@@ -986,24 +986,22 @@ public class TambahDataTernakActivity
 
     private void onSuccessBangsa(BangsaResponse data) {
         progressbarSpinnerBangsaTernak.setVisibility(View.INVISIBLE);
-        if (data.getBangsaKambing() != null) {
-            if (selectedNamaTernak == 1) {
-                for (BangsaSapi bangsaSapi : data.getBangsaSapi()) {
-                    Map<String, String> map = new HashMap<>();
-                    map.put("id", bangsaSapi.getIdBangsa());
-                    map.put("nama", bangsaSapi.getKeterangan());
-                    listBangsaTernak.add(map);
-                }
-            } else {
-                for (BangsaKambing bangsaSapi : data.getBangsaKambing()) {
-                    Map<String, String> map = new HashMap<>();
-                    map.put("id", bangsaSapi.getIdBangsa());
-                    map.put("nama", bangsaSapi.getKeterangan());
-                    listBangsaTernak.add(map);
-                }
+        if (selectedNamaTernak == 1) {
+            for (BangsaSapi bangsaSapi : data.getBangsaSapi()) {
+                Map<String, String> map = new HashMap<>();
+                map.put("id", bangsaSapi.getIdBangsa());
+                map.put("nama", bangsaSapi.getKeterangan());
+                listBangsaTernak.add(map);
             }
-            adapterSpinnerBangsaTernak.notifyDataSetChanged();
+        } else {
+            for (BangsaKambing bangsaSapi : data.getBangsaKambing()) {
+                Map<String, String> map = new HashMap<>();
+                map.put("id", bangsaSapi.getIdBangsa());
+                map.put("nama", bangsaSapi.getKeterangan());
+                listBangsaTernak.add(map);
+            }
         }
+        adapterSpinnerBangsaTernak.notifyDataSetChanged();
     }
 
     private void onErrorBangsa(String message) {

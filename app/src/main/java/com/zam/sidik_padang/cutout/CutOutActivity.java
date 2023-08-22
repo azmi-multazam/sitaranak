@@ -1,4 +1,4 @@
-package com.github.gabrielbb.cutout;
+package com.zam.sidik_padang.cutout;
 
 import android.Manifest;
 import android.app.Activity;
@@ -28,6 +28,7 @@ import com.alexvasilkov.gestures.views.GestureFrameLayout;
 import com.alexvasilkov.gestures.views.interfaces.GestureView;
 import com.theartofdev.edmodo.cropper.CropImage;
 import com.theartofdev.edmodo.cropper.CropImageView;
+import com.zam.sidik_padang.R;
 
 import java.io.IOException;
 

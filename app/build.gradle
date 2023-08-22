@@ -4,6 +4,14 @@ plugins {
 }
 
 android {
+    signingConfigs {
+        debug {
+            storeFile file('C:\\Users\\AbangAzmi\\AndroidProjects\\sidik_padang\\sidik_padang.jks')
+            storePassword 'ferry123'
+            keyPassword 'ferry123'
+            keyAlias 'keySidikPadang'
+        }
+    }
     namespace 'com.zam.sidik_padang'
     viewBinding.enabled = true
     compileSdk 33

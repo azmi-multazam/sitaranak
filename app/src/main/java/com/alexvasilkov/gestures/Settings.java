@@ -10,6 +10,7 @@ import androidx.annotation.Nullable;
 
 import com.alexvasilkov.gestures.internal.UnitsUtils;
 import com.alexvasilkov.gestures.views.interfaces.GestureView;
+import com.zam.sidik_padang.R;
 
 /**
  * Various settings needed for {@link GestureController} and for {@link StateController}.

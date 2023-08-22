@@ -75,7 +75,8 @@ public class TambahPetugasActivity extends BaseLogedinActivity
     private Dialog dialog;
 
     private EditText editTextNama, editTextEmail, editTextHp, editTextAlamat,
-            editTextKodePos, editTextTempatLahir, editTextTanggalLahir;
+            //editTextKodePos,
+            editTextTempatLahir, editTextTanggalLahir;
 
     private AppCompatSpinner spinnerKabupaten;
     private AppCompatSpinner spinnerKecamatan;
@@ -606,7 +607,7 @@ public class TambahPetugasActivity extends BaseLogedinActivity
         param.put("id_jenis_kelamin", (selectedJenisKelamin == 0 ? "1" : listJenisKelamin.get(selectedJenisKelamin).get("id")));
         param.put("id_agama", "0");
 
-        param.put("kode_pos", editTextKodePos.getText().toString().trim());
+        param.put("kode_pos", "0");
         param.put("alamat", editTextAlamat.getText().toString().trim());
         param.put("tanggal_lahir", (birthDayCalendar == null ? "" : new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(birthDayCalendar.getTime())));
 

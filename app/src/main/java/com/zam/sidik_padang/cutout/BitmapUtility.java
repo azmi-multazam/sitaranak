@@ -1,4 +1,4 @@
-package com.github.gabrielbb.cutout;
+package com.zam.sidik_padang.cutout;
 
 import android.graphics.Bitmap;
 import android.graphics.Canvas;

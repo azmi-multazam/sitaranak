@@ -26,8 +26,8 @@ import androidx.core.app.ActivityCompat;
 import androidx.core.content.ContextCompat;
 import androidx.core.content.FileProvider;
 
-import com.github.gabrielbb.cutout.CutOut;
-import com.github.gabrielbb.cutout.CutOutActivity;
+import com.zam.sidik_padang.cutout.CutOut;
+import com.zam.sidik_padang.cutout.CutOutActivity;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.theartofdev.edmodo.cropper.CropImage;
@@ -46,7 +46,7 @@ import com.zam.sidik_padang.databinding.ActivityTtdBinding;
 import com.zam.sidik_padang.util.Util;
 import io.paperdb.Paper;
 
-import static com.github.gabrielbb.cutout.CutOut.CUTOUT_ACTIVITY_REQUEST_CODE;
+import static com.zam.sidik_padang.cutout.CutOut.CUTOUT_ACTIVITY_REQUEST_CODE;
 import static com.theartofdev.edmodo.cropper.CropImage.CROP_IMAGE_ACTIVITY_REQUEST_CODE;
 import static com.zam.sidik_padang.home.sklb.setting.kuantitatif.KuantitatifListFragment.CUTOUT_EXTRA_SOURCE;
 import static com.zam.sidik_padang.util.Config.CATATAN_SERTIFIKAT;

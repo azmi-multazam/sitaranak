@@ -76,10 +76,11 @@ public class DaftarStep3Activity extends BaseActivity
 
     private static final String USER_ID = "ks1000005";
     private final String VOLLEY_TAG = getClass().getName();
-    private EditText editTextNama, editTextKtp, editTextHp, editTextEmail, editTextKodePos,
-            editTextAlamat, editTextTempatLahir, editTextTanggalLahir, editTextPekerjaan, editTextIbuKandung,
-            editTextNamaUsaha, editTextLokasiUsaha, editTextHpPeternakan, editTextEmailPeternakan,
-            editTextNamaOlahan;
+    private EditText editTextNama,
+            //editTextKtp, editTextHp, editTextKodePos, editTextTempatLahir,
+            editTextEmail, editTextAlamat, editTextTanggalLahir,
+                    editTextPekerjaan, editTextIbuKandung, editTextNamaUsaha,
+                    editTextLokasiUsaha, editTextHpPeternakan, editTextEmailPeternakan, editTextNamaOlahan;
 
     private AppCompatSpinner spinnerKabupaten;
     private AppCompatSpinner spinnerKecamatan;
@@ -88,28 +89,35 @@ public class DaftarStep3Activity extends BaseActivity
     private TextView textViewFoto;
     private String fotoLink = "";
 
-    private View frameSpinnerNamaKelompokTernak, frameEditTextNamaOlahan;
+    private View frameSpinnerNamaKelompokTernak, frameEditTextNamaOlahan,
+            layout_ktp;
 
     private SpinnerDaftarAdapter
             adapterSpinnerProvinsi, adapterSpinnerKabupaten,
-            adapterSpinnerKecamatan, adapterSpinnerDesa, adapterSpinnerStatusPernikahan, adapterSpinnerJenisKelamin,
-            adapterSpinnerAgama, adapterSpinnerLevel, adapterSpinnerStatusPeternakan, adapterSpinnerKelompok,
+            adapterSpinnerKecamatan, adapterSpinnerDesa,
+            //adapterSpinnerStatusPernikahan,
+            adapterSpinnerJenisKelamin, adapterSpinnerAgama, adapterSpinnerLevel,
+            adapterSpinnerStatusPeternakan, adapterSpinnerKelompok,
             adapterSpinnerNamaKelompok, adapterSpinnerJenisKomoditas, adapterSpinnerJenisUsaha,
             adapterSpinnerProdukPenjualan;
 
-    private List<Map<String, String>> listProvinsi, listKabupaten, listKecamatan, listDesa, listStatusPernikahan,
+    private List<Map<String, String>> listProvinsi, listKabupaten, listKecamatan, listDesa,
+            //listStatusPernikahan,
             listJenisKelamin, listAgama, listLevel,
             listStatusPeternakan, listKelompok, listNamaKelompok, listJenisKomoditas, listJenisUsaha,
             listProdukPenjualan;
 
     private View progressBarSpinnerProvinsi, progressBarSpinnerKabupaten, progressBarSpinnerKecamatan,
-            progressBarSpinnerDesa, progressBarSpinnerStatusPernikahan, progressBarSpinnerJenisKelamin,
+            progressBarSpinnerDesa,
+            //progressBarSpinnerStatusPernikahan,
+            progressBarSpinnerJenisKelamin,
             progressBarSpinnerAgama, progressBarSpinnerStatusPeternakan, progressBarSpinnerKelompok,
             progressBarSpinnerNamaKelompok, progressBarSpinnerJenisKomoditas, progressBarSpinnerJenisUsaha,
             progressBarSpinnerProdukPenjualan;
 
     private int selectedProvinsi = 0, selectedKabupaten = 0, selectedKecamatan = 0, selectedDesa = 0,
-            selectedStatusPernikahan = 0, selectedJenisKelamin = 0, selectedAgama = 0, selectedLevel = 0,
+            //selectedStatusPernikahan = 0,
+            selectedJenisKelamin = 0, selectedAgama = 0, selectedLevel = 0,
             selectedStatusPeternakan = 0, selectedKelompok = 0, selectedNamaKelompok = 0,
             selectedJenisKomoditas, selectedJenisUsaha = 0, selectedProdukPenjualan = 0;
 
@@ -161,13 +169,17 @@ public class DaftarStep3Activity extends BaseActivity
         pref = PreferenceManager.getDefaultSharedPreferences(this);
         findViewById(R.id.layout_nomor_hp).setVisibility(View.GONE);
         findViewById(R.id.layout_level).setVisibility(View.GONE);
+        findViewById(R.id.layout_kode_pos).setVisibility(View.GONE);
+        findViewById(R.id.layout_pernikahan).setVisibility(View.GONE);
+        findViewById(R.id.layout_tempat_lahir).setVisibility(View.GONE);
         editTextNama = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextName);
-        editTextKtp = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextKTP);
-//		editTextHp = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextHP);
+        //editTextKtp = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextKTP);
+        findViewById(R.id.layout_no_ktp).setVisibility(View.GONE);
+		//editTextHp = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextHP);
         editTextEmail = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextEmail);
-        editTextKodePos = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextPostCode);
+        //editTextKodePos = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextPostCode);
         editTextAlamat = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextAddress);
-        editTextTempatLahir = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextTempatLahir);
+        //editTextTempatLahir = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextTempatLahir);
         editTextTanggalLahir = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextBirthday);
         editTextPekerjaan = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextEmployment);
         editTextIbuKandung = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextMother);
@@ -181,7 +193,7 @@ public class DaftarStep3Activity extends BaseActivity
         spinnerKabupaten = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerKaBupaten);
         spinnerKecamatan = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerKecamatan);
         spinnerDesa = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerDesa);
-        AppCompatSpinner spinnerStatusPernikahan = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerPernikahan);
+        //AppCompatSpinner spinnerStatusPernikahan = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerPernikahan);
         AppCompatSpinner spinnerJenisKelamin = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerGender);
         AppCompatSpinner spinnerAgama = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerReligion);
         AppCompatSpinner spinnerLevel = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerLevel);
@@ -197,7 +209,7 @@ public class DaftarStep3Activity extends BaseActivity
         progressBarSpinnerKabupaten = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerKabupaten);
         progressBarSpinnerKecamatan = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerKecamatan);
         progressBarSpinnerDesa = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerDesa);
-        progressBarSpinnerStatusPernikahan = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerPernikahan);
+        //progressBarSpinnerStatusPernikahan = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerPernikahan);
         progressBarSpinnerJenisKelamin = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerJenisKelamin);
         progressBarSpinnerAgama = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerReligion);
         progressBarSpinnerStatusPeternakan = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerStatusPeternakan);
@@ -262,6 +274,7 @@ public class DaftarStep3Activity extends BaseActivity
         spinnerDesa.setOnItemSelectedListener(new CustomSpinnerListener(spinnerDesa.getId()));
         spinnerDesa.setEnabled(false);
 
+        /*
         listStatusPernikahan = new ArrayList<>();
         map = new HashMap<>();
         map.put(Db.TABLE_PROVINSI_ID, "-1");
@@ -270,6 +283,7 @@ public class DaftarStep3Activity extends BaseActivity
         adapterSpinnerStatusPernikahan = new SpinnerDaftarAdapter(this, listStatusPernikahan);
         spinnerStatusPernikahan.setAdapter(adapterSpinnerStatusPernikahan);
         spinnerStatusPernikahan.setOnItemSelectedListener(new CustomSpinnerListener(spinnerStatusPernikahan.getId()));
+         */
 
         listJenisKelamin = new ArrayList<>();
         map = new HashMap<>();
@@ -519,6 +533,7 @@ public class DaftarStep3Activity extends BaseActivity
             }
             adapterSpinnerJenisKelamin.notifyDataSetChanged();
         }
+        /*
         if (listStatusPernikahan.size() < 2) {
             JsonElement je = jsonObject.get("status_pernikahan");
             if (je == null) return;
@@ -534,6 +549,7 @@ public class DaftarStep3Activity extends BaseActivity
             }
             adapterSpinnerStatusPernikahan.notifyDataSetChanged();
         }
+         */
 
 
     }
@@ -816,6 +832,7 @@ public class DaftarStep3Activity extends BaseActivity
 
         url += "&nama=" + encode(nama);
 
+        /*
         String ktp = editTextKtp.getText().toString().trim();
         if (ktp.isEmpty()) {
             editTextKtp.setError(getString(R.string.this_field_is_mandatory));
@@ -828,6 +845,7 @@ public class DaftarStep3Activity extends BaseActivity
         }
 
         url += "&ktp=" + encode(ktp);
+         */
         url += "&hp=" + pref.getString(Config.PREF_NOMOR_HP, "");
 
         String email = editTextEmail.getText().toString().trim();
@@ -852,10 +870,10 @@ public class DaftarStep3Activity extends BaseActivity
         }
         url += "&desa=" + listDesa.get(selectedDesa).get("id");
 
-        url += "&kode_pos=" + encode(editTextKodePos.getText().toString().trim());
+        //url += "&kode_pos=" + encode(editTextKodePos.getText().toString().trim());
         url += "&alamat=" + encode(editTextAlamat.getText().toString().trim());
-        url += "&status_pernikahan=" + (selectedStatusPernikahan == 0 ? "" : listStatusPernikahan.get(selectedStatusPernikahan).get("id"));
-        url += "&tempat_lahir=" + encode(editTextTempatLahir.getText().toString().trim());
+        //url += "&status_pernikahan=" + (selectedStatusPernikahan == 0 ? "" : listStatusPernikahan.get(selectedStatusPernikahan).get("id"));
+        //url += "&tempat_lahir=" + encode(editTextTempatLahir.getText().toString().trim());
         url += "&tanggal_lahir=" + (birthDayCalendar == null ? "" : new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(birthDayCalendar.getTime()));
         url += "&id_jenis_kelamin=" + (selectedJenisKelamin == 0 ? "" : listJenisKelamin.get(selectedJenisKelamin).get("id"));
         url += "&id_agama=" + (selectedAgama == 0 ? "" : listAgama.get(selectedAgama).get("id"));
@@ -1164,8 +1182,8 @@ public class DaftarStep3Activity extends BaseActivity
                 }
             } else if (viewId == R.id.activity_tambah_peternak_SpinnerDesa) {
                 selectedDesa = position;
-            } else if (viewId == R.id.activity_tambah_peternak_SpinnerPernikahan) {
-                selectedStatusPernikahan = position;
+            //} else if (viewId == R.id.activity_tambah_peternak_SpinnerPernikahan) {
+            //    selectedStatusPernikahan = position;
             } else if (viewId == R.id.activity_tambah_peternak_SpinnerGender) {
                 selectedJenisKelamin = position;
             } else if (viewId == R.id.activity_tambah_peternak_SpinnerReligion) {

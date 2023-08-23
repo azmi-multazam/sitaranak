@@ -161,6 +161,7 @@
                         android:background="@color/colorGreySoft" />
 
                     <FrameLayout
+                        android:id="@+id/layout_no_ktp"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -543,6 +544,7 @@
                         android:background="@color/colorGreySoft" />
 
                     <FrameLayout
+                        android:id="@+id/layout_kode_pos"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -631,6 +633,7 @@
                         android:background="@color/colorGreySoft" />
 
                     <FrameLayout
+                        android:id="@+id/layout_pernikahan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingStart="12dp"
@@ -686,6 +689,7 @@
                         android:background="@color/colorGreySoft" />
 
                     <FrameLayout
+                        android:id="@+id/layout_tempat_lahir"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingStart="12dp"

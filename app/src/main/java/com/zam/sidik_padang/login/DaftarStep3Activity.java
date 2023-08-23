@@ -76,11 +76,9 @@ public class DaftarStep3Activity extends BaseActivity
 
     private static final String USER_ID = "ks1000005";
     private final String VOLLEY_TAG = getClass().getName();
-    private EditText editTextNama,
-            //editTextKtp, editTextHp, editTextKodePos, editTextTempatLahir,
-            editTextEmail, editTextAlamat, editTextTanggalLahir,
-                    editTextPekerjaan, editTextIbuKandung, editTextNamaUsaha,
-                    editTextLokasiUsaha, editTextHpPeternakan, editTextEmailPeternakan, editTextNamaOlahan;
+    private EditText editTextNama, editTextEmail, editTextAlamat, editTextTanggalLahir;
+    //editTextNamaUsaha, editTextLokasiUsaha, editTextHpPeternakan, editTextEmailPeternakan, editTextNamaOlahan,
+    //editTextKtp, editTextHp, editTextKodePos, editTextTempatLahir, editTextPekerjaan, editTextIbuKandung,
 
     private AppCompatSpinner spinnerKabupaten;
     private AppCompatSpinner spinnerKecamatan;
@@ -89,37 +87,33 @@ public class DaftarStep3Activity extends BaseActivity
     private TextView textViewFoto;
     private String fotoLink = "";
 
-    private View frameSpinnerNamaKelompokTernak, frameEditTextNamaOlahan,
-            layout_ktp;
+    private View frameSpinnerNamaKelompokTernak, frameEditTextNamaOlahan;
 
     private SpinnerDaftarAdapter
             adapterSpinnerProvinsi, adapterSpinnerKabupaten,
             adapterSpinnerKecamatan, adapterSpinnerDesa,
-            //adapterSpinnerStatusPernikahan,
-            adapterSpinnerJenisKelamin, adapterSpinnerAgama, adapterSpinnerLevel,
-            adapterSpinnerStatusPeternakan, adapterSpinnerKelompok,
+            //adapterSpinnerStatusPernikahan, adapterSpinnerAgama,
+            adapterSpinnerJenisKelamin, adapterSpinnerLevel,
+            //adapterSpinnerStatusPeternakan,
+                    adapterSpinnerKelompok,
             adapterSpinnerNamaKelompok, adapterSpinnerJenisKomoditas, adapterSpinnerJenisUsaha,
             adapterSpinnerProdukPenjualan;
 
     private List<Map<String, String>> listProvinsi, listKabupaten, listKecamatan, listDesa,
-            //listStatusPernikahan,
-            listJenisKelamin, listAgama, listLevel,
-            listStatusPeternakan, listKelompok, listNamaKelompok, listJenisKomoditas, listJenisUsaha,
-            listProdukPenjualan;
+            //listStatusPernikahan, listAgama,
+            listJenisKelamin, listLevel;
+            //listStatusPeternakan, listKelompok, listNamaKelompok, listJenisKomoditas, listJenisUsaha, listProdukPenjualan;
 
-    private View progressBarSpinnerProvinsi, progressBarSpinnerKabupaten, progressBarSpinnerKecamatan,
-            progressBarSpinnerDesa,
-            //progressBarSpinnerStatusPernikahan,
-            progressBarSpinnerJenisKelamin,
-            progressBarSpinnerAgama, progressBarSpinnerStatusPeternakan, progressBarSpinnerKelompok,
-            progressBarSpinnerNamaKelompok, progressBarSpinnerJenisKomoditas, progressBarSpinnerJenisUsaha,
-            progressBarSpinnerProdukPenjualan;
+    private View progressBarSpinnerProvinsi, progressBarSpinnerKabupaten,
+            progressBarSpinnerKecamatan, progressBarSpinnerDesa, progressBarSpinnerJenisKelamin;
+            //progressBarSpinnerStatusPernikahan, progressBarSpinnerAgama,
+            //progressBarSpinnerStatusPeternakan, progressBarSpinnerKelompok,
+            //progressBarSpinnerNamaKelompok, progressBarSpinnerJenisKomoditas, progressBarSpinnerJenisUsaha,
+            //progressBarSpinnerProdukPenjualan;
 
-    private int selectedProvinsi = 0, selectedKabupaten = 0, selectedKecamatan = 0, selectedDesa = 0,
-            //selectedStatusPernikahan = 0,
-            selectedJenisKelamin = 0, selectedAgama = 0, selectedLevel = 0,
-            selectedStatusPeternakan = 0, selectedKelompok = 0, selectedNamaKelompok = 0,
-            selectedJenisKomoditas, selectedJenisUsaha = 0, selectedProdukPenjualan = 0;
+    private int selectedProvinsi = 0, selectedKabupaten = 0, selectedKecamatan = 0,
+            selectedDesa = 0, selectedJenisKelamin = 0, selectedLevel = 0;     //selectedStatusPernikahan = 0, selectedAgama = 0,
+    //selectedStatusPeternakan = 0, selectedKelompok = 0, selectedNamaKelompok = 0, selectedJenisKomoditas, selectedJenisUsaha = 0, selectedProdukPenjualan = 0;
 
     private Calendar birthDayCalendar;
     private ImageView imageViewFoto, imgAddFoto;
@@ -172,6 +166,11 @@ public class DaftarStep3Activity extends BaseActivity
         findViewById(R.id.layout_kode_pos).setVisibility(View.GONE);
         findViewById(R.id.layout_pernikahan).setVisibility(View.GONE);
         findViewById(R.id.layout_tempat_lahir).setVisibility(View.GONE);
+        findViewById(R.id.layout_agama).setVisibility(View.GONE);
+        findViewById(R.id.layout_pekerjaan).setVisibility(View.GONE);
+        findViewById(R.id.card_data_usaha).setVisibility(View.GONE);
+        findViewById(R.id.layout_ibu_kandung).setVisibility(View.GONE);
+
         editTextNama = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextName);
         //editTextKtp = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextKTP);
         findViewById(R.id.layout_no_ktp).setVisibility(View.GONE);
@@ -181,13 +180,13 @@ public class DaftarStep3Activity extends BaseActivity
         editTextAlamat = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextAddress);
         //editTextTempatLahir = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextTempatLahir);
         editTextTanggalLahir = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextBirthday);
-        editTextPekerjaan = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextEmployment);
-        editTextIbuKandung = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextMother);
-        editTextNamaUsaha = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextNamaUsaha);
-        editTextLokasiUsaha = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextLokasiUsaha);
-        editTextHpPeternakan = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextHpPeternakan);
-        editTextEmailPeternakan = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextEmailPeternakan);
-        editTextNamaOlahan = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextNamaOlahan);
+        //editTextPekerjaan = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextEmployment);
+        //editTextIbuKandung = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextMother);
+        //editTextNamaUsaha = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextNamaUsaha);
+        //editTextLokasiUsaha = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextLokasiUsaha);
+        //editTextHpPeternakan = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextHpPeternakan);
+        //editTextEmailPeternakan = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextEmailPeternakan);
+        //editTextNamaOlahan = (EditText) findViewById(R.id.activity_tambah_peternak_EditTextNamaOlahan);
 
         AppCompatSpinner spinnerProvinsi = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerProvinsi);
         spinnerKabupaten = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerKaBupaten);
@@ -195,15 +194,8 @@ public class DaftarStep3Activity extends BaseActivity
         spinnerDesa = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerDesa);
         //AppCompatSpinner spinnerStatusPernikahan = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerPernikahan);
         AppCompatSpinner spinnerJenisKelamin = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerGender);
-        AppCompatSpinner spinnerAgama = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerReligion);
+        //AppCompatSpinner spinnerAgama = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerReligion);
         AppCompatSpinner spinnerLevel = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerLevel);
-
-        AppCompatSpinner spinnerStatusPeternakan = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerStatusPeternakan);
-        AppCompatSpinner spinnerKelompok = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerKelompok);
-        AppCompatSpinner spinnerNamaKelompok = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerNamaKelompok);
-        AppCompatSpinner spinnerJenisKomoditas = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerJenisKomoditas);
-        AppCompatSpinner spinnerJenisUsaha = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerJenisUsaha);
-        AppCompatSpinner spinnerProdukPenjualan = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerProdukPenjualan);
 
         progressBarSpinnerProvinsi = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerProvinsi);
         progressBarSpinnerKabupaten = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerKabupaten);
@@ -211,18 +203,26 @@ public class DaftarStep3Activity extends BaseActivity
         progressBarSpinnerDesa = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerDesa);
         //progressBarSpinnerStatusPernikahan = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerPernikahan);
         progressBarSpinnerJenisKelamin = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerJenisKelamin);
-        progressBarSpinnerAgama = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerReligion);
+        //progressBarSpinnerAgama = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerReligion);
+
+        /*
+        AppCompatSpinner spinnerStatusPeternakan = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerStatusPeternakan);
+        AppCompatSpinner spinnerKelompok = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerKelompok);
+        AppCompatSpinner spinnerNamaKelompok = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerNamaKelompok);
+        AppCompatSpinner spinnerJenisKomoditas = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerJenisKomoditas);
+        AppCompatSpinner spinnerJenisUsaha = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerJenisUsaha);
+        AppCompatSpinner spinnerProdukPenjualan = (AppCompatSpinner) findViewById(R.id.activity_tambah_peternak_SpinnerProdukPenjualan);
         progressBarSpinnerStatusPeternakan = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerStatusPeternakan);
         progressBarSpinnerKelompok = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerKelompok);
         progressBarSpinnerNamaKelompok = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerNamaKelompok);
         progressBarSpinnerJenisKomoditas = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerJenisKomoditas);
         progressBarSpinnerJenisUsaha = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerJenisUsaha);
         progressBarSpinnerProdukPenjualan = findViewById(R.id.activity_tambah_peternak_ProgressbarspinnerProdukPenjualan);
-        progressBarFoto = (ProgressBar) findViewById(R.id.activity_tambah_peternak_ProgressbarFoto);
-
         frameSpinnerNamaKelompokTernak = findViewById(R.id.activity_tambah_peternak_FrameSpinnerNamaKelompokTernak);
         frameEditTextNamaOlahan = findViewById(R.id.activity_tambah_peternak_FrameEditTextNamaOlahan);
+         */
 
+        progressBarFoto = (ProgressBar) findViewById(R.id.activity_tambah_peternak_ProgressbarFoto);
         imageViewFoto = (ImageView) findViewById(R.id.activity_tambah_peternak_ImageViewFoto);
         imgAddFoto = (ImageView) findViewById(R.id.imgAddFoto);
         imgAddFoto.setOnClickListener(this);
@@ -294,6 +294,7 @@ public class DaftarStep3Activity extends BaseActivity
         spinnerJenisKelamin.setAdapter(adapterSpinnerJenisKelamin);
         spinnerJenisKelamin.setOnItemSelectedListener(new CustomSpinnerListener(spinnerJenisKelamin.getId()));
 
+        /*
         listAgama = new ArrayList<>();
         map = new HashMap<>();
         map.put(Db.TABLE_PROVINSI_ID, "-1");
@@ -357,6 +358,8 @@ public class DaftarStep3Activity extends BaseActivity
         adapterSpinnerProdukPenjualan = new SpinnerDaftarAdapter(this, listProdukPenjualan);
         spinnerProdukPenjualan.setAdapter(adapterSpinnerProdukPenjualan);
         spinnerProdukPenjualan.setOnItemSelectedListener(new CustomSpinnerListener(spinnerProdukPenjualan.getId()));
+         */
+
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -403,6 +406,7 @@ public class DaftarStep3Activity extends BaseActivity
     }
 
     private void bindView(JsonObject jsonObject) {
+        /*
         if (listProdukPenjualan.size() < 2) {
             JsonElement je = jsonObject.get("produk_ternak");
             if (je == null) return;
@@ -470,8 +474,9 @@ public class DaftarStep3Activity extends BaseActivity
         if (listNamaKelompok.size() < 2) {
             JsonElement je = jsonObject.get("kelompok_ternak");
             if (je != null) {
-                for (int i = listNamaKelompok.size() - 1; i > 0; i--)
-                    listNamaKelompok.remove(i);
+                if (listNamaKelompok.size() > 1) {
+                    listNamaKelompok.subList(1, listNamaKelompok.size()).clear();
+                }
                 JsonArray array = je.getAsJsonArray();
                 Map<String, String> map;
                 for (JsonElement element : array) {
@@ -501,7 +506,6 @@ public class DaftarStep3Activity extends BaseActivity
             }
             adapterSpinnerStatusPeternakan.notifyDataSetChanged();
         }
-
         if (listJenisKelamin.size() < 2) {
             JsonElement je = jsonObject.get("status_agama");
             if (je == null) return;
@@ -517,6 +521,7 @@ public class DaftarStep3Activity extends BaseActivity
             }
             adapterSpinnerAgama.notifyDataSetChanged();
         }
+         */
 
         if (listJenisKelamin.size() < 2) {
             JsonElement je = jsonObject.get("Kelamin");
@@ -550,14 +555,12 @@ public class DaftarStep3Activity extends BaseActivity
             adapterSpinnerStatusPernikahan.notifyDataSetChanged();
         }
          */
-
-
     }
 
+    /*
     private void loadListNamaKelompok() {
         if (listNamaKelompok.size() > 1 || !Util.isInternetAvailible(this)) return;
-        if (frameSpinnerNamaKelompokTernak.getVisibility() == View.VISIBLE)
-            progressBarSpinnerNamaKelompok.setVisibility(View.VISIBLE);
+        if (frameSpinnerNamaKelompokTernak.getVisibility() == View.VISIBLE) progressBarSpinnerNamaKelompok.setVisibility(View.VISIBLE);
 
         String url = Config.URL_NAMA_KELOMPOK;
         url += "?userid=" + USER_ID;
@@ -596,6 +599,7 @@ public class DaftarStep3Activity extends BaseActivity
         request.setTag(VOLLEY_TAG);
         VolleySingleton.getInstance(this).getRequestQueue().add(request);
     }
+     */
 
     private void loadProvinsiList() {
         if (listProvinsi.size() > 1) return;
@@ -876,13 +880,14 @@ public class DaftarStep3Activity extends BaseActivity
         //url += "&tempat_lahir=" + encode(editTextTempatLahir.getText().toString().trim());
         url += "&tanggal_lahir=" + (birthDayCalendar == null ? "" : new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(birthDayCalendar.getTime()));
         url += "&id_jenis_kelamin=" + (selectedJenisKelamin == 0 ? "" : listJenisKelamin.get(selectedJenisKelamin).get("id"));
-        url += "&id_agama=" + (selectedAgama == 0 ? "" : listAgama.get(selectedAgama).get("id"));
-        url += "&pekerjaan=" + encode(editTextPekerjaan.getText().toString().trim());
-        url += "&ibu=" + encode(editTextIbuKandung.getText().toString().trim());
+        //url += "&id_agama=" + (selectedAgama == 0 ? "" : listAgama.get(selectedAgama).get("id"));
+        //url += "&pekerjaan=" + encode(editTextPekerjaan.getText().toString().trim());
+        //url += "&ibu=" + encode(editTextIbuKandung.getText().toString().trim());
         url += "&level=" + (selectedLevel == 0 ? "" : listLevel.get(selectedLevel).get("id"));
 
-        url += "&nama_usaha=" + encode(editTextNamaUsaha.getText().toString().trim());
+        //url += "&nama_usaha=" + encode(editTextNamaUsaha.getText().toString().trim());
 
+        /*
         if (selectedStatusPeternakan == 0) {
             Util.showDialog(this, getString(R.string.please_select_status_peternakan));
             return;
@@ -902,6 +907,7 @@ public class DaftarStep3Activity extends BaseActivity
             url += "&kelompok_ternak=" + listNamaKelompok.get(selectedNamaKelompok).get("id");
         }
 
+        /*
         String lokasi_usaha = editTextLokasiUsaha.getText().toString().trim();
         if (lokasi_usaha.isEmpty()) {
             editTextLokasiUsaha.setError(getString(R.string.this_field_is_mandatory));
@@ -928,6 +934,7 @@ public class DaftarStep3Activity extends BaseActivity
         url += "&produk_penjualan=" + (selectedProdukPenjualan == 0 ? "" : listProdukPenjualan.get(selectedProdukPenjualan).get("id"));
         if (selectedProdukPenjualan == 4)
             url += "&nama_olahan=" + encode(editTextNamaOlahan.getText().toString().trim());
+         */
         url += "&foto=" + fotoLink;
 
         debug(getClass(), "Validate and go. Url: " + url);
@@ -956,7 +963,6 @@ public class DaftarStep3Activity extends BaseActivity
                         finish();
                     }
                 } else {
-
                     if (isResummed) {
                         JsonElement je = jsonObject.get("message");
                         Util.showDialog(DaftarStep3Activity.this, je == null ? getString(R.string.an_error_ocurred) : je.getAsString());
@@ -1048,7 +1054,9 @@ public class DaftarStep3Activity extends BaseActivity
                     if (je == null) return;
                     JsonArray array = je.getAsJsonArray();
                     Map<String, String> map;
-                    for (int i = listKecamatan.size() - 1; i > 0; i--) listKecamatan.remove(i);
+                    if (listKecamatan.size() > 1) {
+                        listKecamatan.subList(1, listKecamatan.size()).clear();
+                    }
 
                     for (JsonElement element : array) {
                         if (element == null) continue;
@@ -1092,7 +1100,9 @@ public class DaftarStep3Activity extends BaseActivity
                     if (je == null) return;
                     JsonArray array = je.getAsJsonArray();
                     Map<String, String> map;
-                    for (int i = listDesa.size() - 1; i > 0; i--) listDesa.remove(i);
+                    if (listDesa.size() > 1) {
+                        listDesa.subList(1, listDesa.size()).clear();
+                    }
 
                     for (JsonElement element : array) {
                         if (element == null) continue;
@@ -1186,7 +1196,7 @@ public class DaftarStep3Activity extends BaseActivity
             //    selectedStatusPernikahan = position;
             } else if (viewId == R.id.activity_tambah_peternak_SpinnerGender) {
                 selectedJenisKelamin = position;
-            } else if (viewId == R.id.activity_tambah_peternak_SpinnerReligion) {
+            /*} else if (viewId == R.id.activity_tambah_peternak_SpinnerReligion) {
                 selectedAgama = position;
             } else if (viewId == R.id.activity_tambah_peternak_SpinnerLevel) {
                 selectedLevel = position;
@@ -1196,7 +1206,7 @@ public class DaftarStep3Activity extends BaseActivity
                 selectedKelompok = position;
                 if (position == 2) {
                     frameSpinnerNamaKelompokTernak.setVisibility(View.VISIBLE);
-//					loadListNamaKelompok();
+					//loadListNamaKelompok();
                 } else frameSpinnerNamaKelompokTernak.setVisibility(View.GONE);
             } else if (viewId == R.id.activity_tambah_peternak_SpinnerNamaKelompok) {
                 selectedNamaKelompok = position;
@@ -1208,10 +1218,9 @@ public class DaftarStep3Activity extends BaseActivity
                 selectedProdukPenjualan = position;
                 if (position == 4) {
                     frameEditTextNamaOlahan.setVisibility(View.VISIBLE);
-
                 } else frameEditTextNamaOlahan.setVisibility(View.GONE);
+             */
             }
-
         }
     }
 }

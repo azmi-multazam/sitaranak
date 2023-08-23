@@ -133,15 +133,15 @@ public class MemberFragment extends Fragment
         List<HomeMenuView.ItemMenu> homeMenuList = new ArrayList<>();
 
         if (kelompok == 4) {
-            homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_cow, "Ternak", "1"));
+            homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_ternak, "Ternak", "1"));
             homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_group, "Pemilik Ternak", "2"));
             homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_print, "Cetak SKLB", "4"));
             homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_news, "Berita/Info", "10"));
         } else if (kelompok == 5) {
-            homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_cow, "Ternak", "1"));
-            homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_group, "Pemilik Ternak", "2"));
-            homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_baseline_assignment_24, "SKLB", "3"));
-            homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_print, "Cetak SKLB", "4"));
+            homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_ternak, "Ternak", "1"));
+            //homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_group, "Pemilik Ternak", "2"));
+            //homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_baseline_assignment_24, "SKLB", "3"));
+            //homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_print, "Cetak SKLB", "4"));
             homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_news, "Berita/Info", "10"));
         } else {
             homeMenuList.add(new HomeMenuView.ItemMenu(R.drawable.ic_baseline_assignment_ind_24, "Ternak IB", "5"));

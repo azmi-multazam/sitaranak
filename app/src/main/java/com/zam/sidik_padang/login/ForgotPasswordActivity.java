@@ -25,7 +25,7 @@ import com.zam.sidik_padang.util.VolleyStringRequest;
 public class ForgotPasswordActivity extends BaseActivity {
 
     private static final String VOLLEY_TAG = ForgotPasswordActivity.class.getName();
-    private EditText editTextUserId, editTextNomorHp;
+    private EditText editTextNomorHp;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,7 +40,8 @@ public class ForgotPasswordActivity extends BaseActivity {
                 finish();
             }
         });
-        editTextUserId = (EditText) findViewById(R.id.activity_reset_sandi_EditTextUser);
+        findViewById(R.id.layout_username).setVisibility(View.GONE);
+        //editTextUserId = (EditText) findViewById(R.id.activity_reset_sandi_EditTextUser);
         editTextNomorHp = (EditText) findViewById(R.id.activity_reset_sandi_EditTexNomorHp);
         findViewById(R.id.activity_reset_sandi_Button).setOnClickListener(new View.OnClickListener() {
             @Override
@@ -51,12 +52,14 @@ public class ForgotPasswordActivity extends BaseActivity {
     }
 
     private void validate() {
+        /*
         String userId = editTextUserId.getText().toString().trim();
         if (userId.isEmpty()) {
             editTextUserId.requestFocus();
             editTextUserId.setError("Harus diisi");
             return;
         }
+         */
 
         String hp = editTextNomorHp.getText().toString().trim();
         if (hp.isEmpty()) {
@@ -70,7 +73,7 @@ public class ForgotPasswordActivity extends BaseActivity {
             return;
         }
 
-        String url = Config.URL_PROFILE + "?aksi=4&userid=" + userId + "&hp=" + hp;
+        String url = Config.URL_PROFILE + "?aksi=4&hp=" + hp;
         debug(getClass(), "reset sandi url=" + url);
         final Dialog dialog = ProgressDialog.show(this, null, "Harap tunggu...", true, false);
         VolleyStringRequest request = new VolleyStringRequest(url, new VolleyStringRequest.Callback() {

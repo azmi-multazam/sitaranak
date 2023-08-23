@@ -838,6 +838,7 @@
                         android:background="@color/colorGreySoft" />
 
                     <FrameLayout
+                        android:id="@+id/layout_agama"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -895,6 +896,7 @@
                         android:background="@color/colorGreySoft" />
 
                     <FrameLayout
+                        android:id="@+id/layout_pekerjaan"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="12dp"
@@ -945,6 +947,7 @@
                         android:paddingEnd="12dp">
 
                         <LinearLayout
+                            android:id="@+id/layout_ibu_kandung"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:gravity="center_vertical"
@@ -1028,6 +1031,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/card_data_usaha"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="6dp"
